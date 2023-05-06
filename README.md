@@ -13,7 +13,7 @@ if (!requireNamespace("devtools", quietly = TRUE)) {
 }
 
 # Install 'genderstat' from GitHub
-devtools::install_github("your_github_username/genderstat")
+devtools::install_github("mashrur-ayon/genderstat")
 ```
 
 ## Functions
