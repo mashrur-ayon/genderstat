@@ -1,0 +1,26 @@
+#' Calculate Occupational Segregation
+#'
+#' This function calculates the occupational segregation index using a data frame containing the number of men and women in each occupational category.
+#' @param data A data frame containing at least three columns: 'occupation' (factor or character), 'male_count' (numeric), and 'female_count' (numeric)
+#' @return The occupational segregation index as a numeric value
+#' @export
+#' @examples
+#' # Load a sample dataset containing occupational data
+#' data("sample_occupational_data")
+#' # Calculate the Occupational Segregation Index
+#' occupational_segregation(sample_occupational_data)
+occupational_segregation <- function(data) {
+  # Check input data for required columns
+  if (!all(c("occupation", "male_count", "female_count") %in% colnames(data))) {
+    stop("The input data must contain 'occupation', 'male_count', and 'female_count' columns.")
+  }
+
+  # Calculate the proportion of men and women in each occupation
+  data$male_prop <- data$male_count / (data$male_count + data$female_count)
+  data$female_prop <- data$female_count / (data$male_count + data$female_count)
+
+  # Calculate the index of dissimilarity (D)
+  D <- 0.5 * sum(abs(data$male_prop - data$female_prop))
+
+  return(D)
+}
