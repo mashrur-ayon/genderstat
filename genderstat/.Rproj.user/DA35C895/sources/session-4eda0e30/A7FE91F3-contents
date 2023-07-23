@@ -10,6 +10,20 @@
 #' # Calculate the Gender Pay Gap
 #' gender_pay_gap(sample_income_data)
 
+
+
+
+# Set the seed for reproducibility
+set.seed(123)
+
+# Generate simulated data
+simulated_data_GPG <- data.frame(
+  person = paste("Person", 1:200), # 200 hypothetical people
+  sex = sample(c("Male", "Female"), 200, replace = TRUE), # Randomly assign sex to each person
+  income = runif(200, 20000, 100000) # Random income between 20000 and 100000
+)
+
+
 gender_pay_gap <- function(data) {
   # Check input data for required columns
   if (!all(c("salary", "gender") %in% colnames(data))) {
@@ -26,3 +40,12 @@ gender_pay_gap <- function(data) {
 
   return(gpg)
 }
+
+
+
+
+# View the first few rows of the data frame
+head(simulated_data_GPG)
+
+# Test the Gender Pay Gap function
+gender_pay_gap(simulated_data_GPG)
