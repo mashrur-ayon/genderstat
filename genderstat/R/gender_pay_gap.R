@@ -12,17 +12,24 @@
 
 
 
-
+###################################
 # Set the seed for reproducibility
 set.seed(123)
-
+##########################
 # Generate simulated data
+##########################
+##################################
+
 simulated_data_GPG <- data.frame(
   person = paste("Person", 1:200), # 200 hypothetical people
-  sex = sample(c("Male", "Female"), 200, replace = TRUE), # Randomly assign sex to each person
-  income = runif(200, 20000, 100000) # Random income between 20000 and 100000
+  gender = sample(c("Male", "Female"), 200, replace = TRUE), # Randomly assign sex to each person
+  salary = runif(200, 20000, 100000) # Random income between 20000 and 100000
 )
 
+
+##########################################################
+##########################################################
+##########################################################
 
 gender_pay_gap <- function(data) {
   # Check input data for required columns

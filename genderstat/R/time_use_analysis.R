@@ -10,6 +10,30 @@
 #' # Conduct Time-use Analysis
 #' time_use_analysis(sample_time_use_data)
 
+
+###################################
+# Set the seed for reproducibility
+set.seed(123)
+##########################
+# Generate simulated data for Time-use Analysis
+##########################
+##################################
+
+simulated_data_TUA <- data.frame(
+  person = 1:200, # 200 hypothetical people
+
+  # Gender assignment
+  gender = sample(c("Male", "Female"), 200, replace = TRUE),
+
+  # Hours spent on unpaid work (generally ranges between 0 to 24 hours for this simulation)
+  unpaid_work_hours = runif(200, 0, 24),
+
+  # Hours spent on paid work (generally ranges between 0 to 24 hours for this simulation)
+  paid_work_hours = runif(200, 0, 24)
+)
+
+################################################################################
+################################################################################
 time_use_analysis <- function(data) {
   # Check input data for required columns
   if (!all(c("gender", "unpaid_work_hours", "paid_work_hours") %in% colnames(data))) {
@@ -21,3 +45,10 @@ time_use_analysis <- function(data) {
 
   return(avg_time_use)
 }
+
+
+# View the first few rows of the data frame
+head(simulated_data_TUA)
+
+# Test the Time-use Analysis function
+time_use_analysis(simulated_data_TUA)
