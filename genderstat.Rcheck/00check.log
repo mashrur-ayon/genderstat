@@ -1,0 +1,117 @@
+* using log directory 'C:/Users/Asus/OneDrive/Documents/GitHub/genderstat/genderstat.Rcheck'
+* using R version 4.2.2 (2022-10-31 ucrt)
+* using platform: x86_64-w64-mingw32 (64-bit)
+* using session charset: UTF-8
+* using options '--no-manual --as-cran'
+* checking for file 'genderstat/DESCRIPTION' ... OK
+* checking extension type ... Package
+* this is package 'genderstat' version '0.1.1'
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking whether package 'genderstat' can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking for future file timestamps ... OK
+* checking DESCRIPTION meta-information ... NOTE
+License components which are templates and need '+ file LICENSE':
+  MIT License
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... OK
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+gender_pay_gap: no visible global function definition for 'aggregate'
+time_use_analysis: no visible global function definition for
+  'aggregate'
+Undefined global functions or variables:
+  aggregate
+Consider adding
+  importFrom("stats", "aggregate")
+to your NAMESPACE file.
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... WARNING
+Data with usage in documentation object 'simulated_data_GDI' but not in code:
+  'simulated_data_GDI'
+
+Data with usage in documentation object 'simulated_data_GEM' but not in code:
+  'simulated_data_GEM'
+
+Data with usage in documentation object 'simulated_data_GII' but not in code:
+  'simulated_data_GII'
+
+Data with usage in documentation object 'simulated_data_GPG' but not in code:
+  'simulated_data_GPG'
+
+Data with usage in documentation object 'simulated_data_OS' but not in code:
+  'simulated_data_OS'
+
+Data with usage in documentation object 'simulated_data_TUA' but not in code:
+  'simulated_data_TUA'
+
+Data codoc mismatches from documentation object 'simulated_data_GEM':
+Variables in data frame 'simulated_data_GEM'
+  Code: country female_parliament_seats female_professional_positions
+        female_to_male_earned_income_ratio
+  Docs: country female_income_ratio female_parliament_seats_ratio
+        female_professional_technical_workers_ratio
+
+Data codoc mismatches from documentation object 'simulated_data_GII':
+Variables in data frame 'simulated_data_GII'
+  Code: adolescent_birth_rate country female_labor_force
+        female_parliament_seats female_secondary_education
+        male_labor_force male_secondary_education
+        maternal_mortality_ratio
+  Docs: country female_labor_force female_reproductive_age
+        female_secondary_education male_reproductive_age
+        male_secondary_education
+
+Data codoc mismatches from documentation object 'simulated_data_GPG':
+Variables in data frame 'simulated_data_GPG'
+  Code: gender person salary
+  Docs: country female_salary male_salary
+
+Data codoc mismatches from documentation object 'simulated_data_OS':
+Variables in data frame 'simulated_data_OS'
+  Code: female_count male_count occupation
+  Docs: country female_occupation male_occupation
+
+Data codoc mismatches from documentation object 'simulated_data_TUA':
+Variables in data frame 'simulated_data_TUA'
+  Code: gender paid_work_hours person unpaid_work_hours
+  Docs: country female_leisure_time gender_time_difference
+        male_leisure_time
+
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking contents of 'data' directory ... OK
+* checking data for non-ASCII characters ... OK
+* checking LazyData ... OK
+* checking data for ASCII and uncompressed saves ... OK
+* checking examples ... OK
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 1 WARNING, 2 NOTEs

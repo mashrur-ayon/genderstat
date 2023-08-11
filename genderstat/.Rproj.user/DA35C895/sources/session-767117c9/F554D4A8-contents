@@ -1,0 +1,30 @@
+##################################
+# Set the seed for reproducibility
+set.seed(123)
+##########################
+# Generate simulated data for GEM
+##########################
+##################################
+
+simulated_data_GEM <- data.frame(
+  country = paste("Country", 1:200), # 200 hypothetical countries
+
+  # Proportion of seats in parliament held by women (generally ranges between 0 to 100%)
+  female_parliament_seats = runif(200, 0, 100),
+
+  # Percentage of women in professional and technical positions (generally ranges between 0 to 100%)
+  female_professional_positions = runif(200, 0, 100),
+
+  # Ratio of estimated female-to-male earned income (generally ranges between 0 to 100%)
+  female_to_male_earned_income_ratio = runif(200, 0, 100)
+)
+
+
+
+
+################################################################################
+# View the first few rows of the data frame
+head(simulated_data_GEM)
+
+# Test the Gender Empowerment Measure function
+gender_empowerment_measure(simulated_data_GEM)

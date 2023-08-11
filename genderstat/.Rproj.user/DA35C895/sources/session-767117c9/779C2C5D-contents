@@ -1,0 +1,25 @@
+###################################
+# Set the seed for reproducibility
+set.seed(123)
+##########################
+# Generate simulated data
+##########################
+##################################
+
+simulated_data_GPG <- data.frame(
+  person = paste("Person", 1:200), # 200 hypothetical people
+  gender = sample(c("Male", "Female"), 200, replace = TRUE), # Randomly assign sex to each person
+  salary = runif(200, 20000, 100000) # Random income between 20000 and 100000
+)
+
+
+##########################################################
+
+
+
+# View the first few rows of the data frame
+head(simulated_data_GPG)
+
+save(simulated_data_GPG, file="data/gender_pay_gap.RData")
+# Test the Gender Pay Gap function
+#gender_pay_gap(simulated_data_GPG)

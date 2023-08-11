@@ -1,0 +1,49 @@
+#' Simulated Data for Time-use Analysis
+#'
+#' A dataset containing simulated values for Time-use Analysis.
+#'
+#' @format A data frame with 200 rows and 4 columns:
+#' \describe{
+#'   \item{country}{A character vector representing the name of the country.}
+#'   \item{female_leisure_time}{A numeric vector representing the average leisure time in hours per day for females in the respective country.}
+#'   \item{male_leisure_time}{A numeric vector representing the average leisure time in hours per day for males in the respective country.}
+#'   \item{gender_time_difference}{A numeric vector representing the difference in leisure time between genders in the respective country.}
+#' }
+#' @source The dataset is simulated for the purpose of this package.
+#' @name simulated_data_TUA
+#' @docType data
+#' @usage data(simulated_data_TUA)
+NULL
+
+
+
+###################################
+# Set the seed for reproducibility
+set.seed(123)
+##########################
+# Generate simulated data for Time-use Analysis
+##########################
+##################################
+
+simulated_data_TUA <- data.frame(
+  person = 1:200, # 200 hypothetical people
+
+  # Gender assignment
+  gender = sample(c("Male", "Female"), 200, replace = TRUE),
+
+  # Hours spent on unpaid work (generally ranges between 0 to 24 hours for this simulation)
+  unpaid_work_hours = runif(200, 0, 24),
+
+  # Hours spent on paid work (generally ranges between 0 to 24 hours for this simulation)
+  paid_work_hours = runif(200, 0, 24)
+)
+
+################################################################################
+
+
+# View the first few rows of the data frame
+head(simulated_data_TUA)
+
+save(simulated_data_TUA, file="data/time_use_analysis.RData")
+# Test the Time-use Analysis function
+#time_use_analysis(simulated_data_TUA)

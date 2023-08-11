@@ -1,0 +1,61 @@
+#' Simulated Data for Gender Inequality Index (GII)
+#'
+#' A dataset containing simulated values for the GII analysis.
+#'
+#' @format A data frame with 200 rows and 6 columns:
+#' \describe{
+#'   \item{country}{A character vector representing the name of the country.}
+#'   \item{female_reproductive_age}{A numeric vector representing the reproductive age for females in the respective country.}
+#'   \item{male_reproductive_age}{A numeric vector representing the reproductive age for males in the respective country.}
+#'   \item{female_secondary_education}{A numeric vector representing the secondary education completion rate for females in the respective country. Measured as a proportion (0-1).}
+#'   \item{male_secondary_education}{A numeric vector representing the secondary education completion rate for males in the respective country. Measured as a proportion (0-1).}
+#'   \item{female_labor_force}{A numeric vector representing the labor force participation rate for females in the respective country. Measured as a proportion (0-1).}
+#' }
+#' @source The dataset is simulated for the purpose of this package.
+#' @name simulated_data_GII
+#' @docType data
+#' @usage data(simulated_data_GII)
+NULL
+
+
+###################################
+# Set the seed for reproducibility
+set.seed(123)
+##########################
+# Generate simulated data for GII
+##########################
+##################################
+
+simulated_data_GII <- data.frame(
+  country = paste("Country", 1:200), # 200 hypothetical countries
+
+  # Maternal mortality ratio (ranges can vary by country, using a broad range here)
+  maternal_mortality_ratio = runif(200, 10, 200),
+
+  # Adolescent birth rate (ranges can vary by country, using a broad range here)
+  adolescent_birth_rate = runif(200, 10, 100),
+
+  # Proportion of seats in parliament held by women (generally ranges between 0 to 100%)
+  female_parliament_seats = runif(200, 0, 100),
+
+  # Percentage of females with at least some secondary education (generally ranges between 0 to 100%)
+  female_secondary_education = runif(200, 0, 100),
+
+  # Percentage of males with at least some secondary education (generally ranges between 0 to 100%)
+  male_secondary_education = runif(200, 0, 100),
+
+  # Female labor force participation rate (generally ranges between 0 to 100%)
+  female_labor_force = runif(200, 0, 100),
+
+  # Male labor force participation rate (generally ranges between 0 to 100%)
+  male_labor_force = runif(200, 0, 100)
+)
+
+############################################################################
+# View the first few rows of the data frame
+head(simulated_data_GII)
+
+
+save(simulated_data_GII, file="data/gender_inequality_index.RData")
+# Test the Gender Inequality Index function
+#gender_inequality_index(simulated_data_GII)

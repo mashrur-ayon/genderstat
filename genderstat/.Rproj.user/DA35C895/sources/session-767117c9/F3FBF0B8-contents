@@ -1,0 +1,42 @@
+#' Simulated Data for Gender Pay Gap (GPG)
+#'
+#' A dataset containing simulated values for the GPG analysis.
+#'
+#' @format A data frame with 200 rows and 3 columns:
+#' \describe{
+#'   \item{country}{A character vector representing the name of the country.}
+#'   \item{female_salary}{A numeric vector representing the average salary of females in the respective country. Measured in international dollars.}
+#'   \item{male_salary}{A numeric vector representing the average salary of males in the respective country. Measured in international dollars.}
+#' }
+#' @source The dataset is simulated for the purpose of this package.
+#' @name simulated_data_GPG
+#' @docType data
+#' @usage data(simulated_data_GPG)
+NULL
+
+
+###################################
+# Set the seed for reproducibility
+set.seed(123)
+##########################
+# Generate simulated data
+##########################
+##################################
+
+simulated_data_GPG <- data.frame(
+  person = paste("Person", 1:200), # 200 hypothetical people
+  gender = sample(c("Male", "Female"), 200, replace = TRUE), # Randomly assign sex to each person
+  salary = runif(200, 20000, 100000) # Random income between 20000 and 100000
+)
+
+
+##########################################################
+
+
+
+# View the first few rows of the data frame
+head(simulated_data_GPG)
+
+save(simulated_data_GPG, file="data/gender_pay_gap.RData")
+# Test the Gender Pay Gap function
+#gender_pay_gap(simulated_data_GPG)

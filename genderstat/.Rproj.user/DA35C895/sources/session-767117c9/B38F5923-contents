@@ -1,0 +1,38 @@
+#' Occupational Segregation Indices
+#'
+#' Computes the Occupational Segregation Indices based on the provided dataset.
+#'
+#' @param data A data frame containing the required metrics for occupational segregation computation.
+#'
+#' @return A numeric vector representing the Occupational Segregation Indices.
+#'
+#' @examples
+#' \dontrun{
+#' data(occupational_segregation_data) # Load example dataset
+#' os_results <- occupational_segregation(occupational_segregation_data)
+#' print(os_results)
+#' }
+#'
+#' @export
+occupational_segregation <- function(data) {
+  ...
+}
+
+###############################################################################
+
+occupational_segregation <- function(data) {
+  # Check input data for required columns
+  if (!all(c("occupation", "male_count", "female_count") %in% colnames(data))) {
+    stop("The input data must contain 'occupation', 'male_count', and 'female_count' columns.")
+  }
+
+  # Calculate the proportion of men and women in each occupation
+  data$male_prop <- data$male_count / (data$male_count + data$female_count)
+  data$female_prop <- data$female_count / (data$male_count + data$female_count)
+
+  # Calculate the index of dissimilarity (D)
+  D <- 0.5 * sum(abs(data$male_prop - data$female_prop))
+
+  return(D)
+}
+
