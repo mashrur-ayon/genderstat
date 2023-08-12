@@ -8,12 +8,15 @@
 A data frame with 200 rows and 6 columns:
 \describe{
   \item{country}{A character vector representing the name of the country.}
-  \item{female_reproductive_age}{A numeric vector representing the reproductive age for females in the respective country.}
-  \item{male_reproductive_age}{A numeric vector representing the reproductive age for males in the respective country.}
-  \item{female_secondary_education}{A numeric vector representing the secondary education completion rate for females in the respective country. Measured as a proportion (0-1).}
-  \item{male_secondary_education}{A numeric vector representing the secondary education completion rate for males in the respective country. Measured as a proportion (0-1).}
-  \item{female_labor_force}{A numeric vector representing the labor force participation rate for females in the respective country. Measured as a proportion (0-1).}
-}
+  \item{maternal_mortality_ratio}{Maternal Mortality Ratio.}
+  \item{adolescent_birth_rate}{Adoloscent Birth rate.}
+  \item{female_parliament_seats}{Female Parliament Seats.}
+  \item{female_secondary_education}{Female Secondary Education.}
+  \item{male_secondary_education}{Male Secondary Education.}
+  \item{female_labor_force}{Participation of female in labour force.}
+  \item{male_labor_force}{Participation of male in labour force.}
+
+  }
 }
 \source{
 The dataset is simulated for the purpose of this package.

@@ -5,7 +5,7 @@
 #' @param data A data frame containing the required metrics for GPG computation.
 #'
 #' @return A numeric vector representing the GPG values.
-#' @importFrom stats aggregate
+#'
 #' @examples
 #' \dontrun{
 #' data(gender_pay_gap_data) # Load example dataset

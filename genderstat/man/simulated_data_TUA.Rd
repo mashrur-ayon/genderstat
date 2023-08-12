@@ -7,10 +7,10 @@
 \format{
 A data frame with 200 rows and 4 columns:
 \describe{
-  \item{country}{A character vector representing the name of the country.}
-  \item{female_leisure_time}{A numeric vector representing the average leisure time in hours per day for females in the respective country.}
-  \item{male_leisure_time}{A numeric vector representing the average leisure time in hours per day for males in the respective country.}
-  \item{gender_time_difference}{A numeric vector representing the difference in leisure time between genders in the respective country.}
+  \item{person}{ID of person.}
+  \item{gender}{Identified gender of the person.}
+  \item{unpaid_work_hours}{Unpaid work hours}
+  \item{paid_work_hours}{Paid work hours}
 }
 }
 \source{

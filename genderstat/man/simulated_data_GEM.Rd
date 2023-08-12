@@ -8,9 +8,9 @@
 A data frame with 200 rows and 4 columns:
 \describe{
   \item{country}{A character vector representing the name of the country.}
-  \item{female_parliament_seats_ratio}{A numeric vector representing the ratio of parliamentary seats occupied by females in the respective country. Measured as a proportion (0-1).}
-  \item{female_professional_technical_workers_ratio}{A numeric vector representing the ratio of professional and technical job roles occupied by females in the respective country. Measured as a proportion (0-1).}
-  \item{female_income_ratio}{A numeric vector representing the income ratio for females in the respective country in comparison to males. Measured as a proportion (0-1), where 1 indicates equal income with males.}
+  \item{female_parliament_seats}{A numeric vector representing the ratio of parliamentary seats occupied by females in the respective country. Measured as a proportion (0-1).}
+  \item{female_professional_positions}{A numeric vector representing the ratio of professional and technical job roles occupied by females in the respective country. Measured as a proportion (0-1).}
+  \item{female_to_male_earned_income_ratio}{A numeric vector representing the income ratio for females in the respective country in comparison to males. Measured as a proportion (0-1), where 1 indicates equal income with males.}
 }
 }
 \source{

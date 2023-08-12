@@ -27,7 +27,7 @@ gender_inequality_index <- function(data) {
 #' \describe{
 #'   \item{country}{A character vector representing the name of the country.}
 #'   \item{maternal_mortality_ratio}{Maternal Mortality Ratio.}
-#'   \item{adolescent_birth_rate}{Adoloscent Birth rate.}
+#'   \item{adoloscent_birth_rate}{Adoloscent Birth rate.}
 #'   \item{female_parliament_seats}{Female Parliament Seats.}
 #'   \item{female_secondary_education}{Female Secondary Education.}
 #'   \item{male_secondary_education}{Male Secondary Education.}

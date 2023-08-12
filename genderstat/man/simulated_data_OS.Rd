@@ -7,9 +7,9 @@
 \format{
 A data frame with 200 rows and 3 columns:
 \describe{
-  \item{country}{A character vector representing the name of the country.}
-  \item{female_occupation}{A character vector representing the most common occupation for females in the respective country.}
-  \item{male_occupation}{A character vector representing the most common occupation for males in the respective country.}
+  \item{occupation}{Occupation of the person.}
+  \item{male_count}{Male Count.}
+  \item{female_count}{Female Count.}
 }
 }
 \source{
