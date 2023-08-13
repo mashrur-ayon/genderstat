@@ -1,10 +1,9 @@
 Package: genderstat
 Type: Package
-Title: genderstat: Quantitative Analysis Tools for Gender Studies
-Version: 0.1.1
-Author: Mashrur Ayon mashrur399@gmail.com
-Maintainer: Mashrur Ayon <mashrur399@gmail.com>
-Description: Genderstat is an R package designed to provide tools for quantitative analysis in gender studies. It includes functions to calculate various gender inequality metrics, such as the Gender Pay Gap, Gender Inequality Index (GII), Gender Development Index (GDI), Occupational Segregation Indices, Gender Empowerment Measure (GEM), and Time-use Analysis Metrics. The package also offers sample datasets for practice and learning purposes.
+Title: Quantitative Analysis Tools for Gender Studies
+Version: 0.1.2
+Authors@R: person("S M Mashrur", "Arafin Ayon", email = "mashrur399@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-3659-2891"))
+Description: Provides tools for quantitative analysis in gender studies, including functions to calculate various gender inequality metrics such as the Gender Pay Gap, Gender Inequality Index (GII), Gender Development Index (GDI), Occupational Segregation Indices, Gender Empowerment Measure (GEM), and Time-use Analysis Metrics. Also includes simulated sample datasets for practice and learning purposes.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
