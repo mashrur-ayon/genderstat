@@ -16,10 +16,9 @@ A numeric vector representing the GPG values.
 Computes the Gender Pay Gap (GPG) based on the provided dataset.
 }
 \examples{
-\dontrun{
-data(gender_pay_gap_data) # Load example dataset
-gpg_results <- gender_pay_gap(gender_pay_gap_data)
+
+data(real_data_GPG) # Load example dataset
+gpg_results <- gender_pay_gap(real_data_GPG)
 print(gpg_results)
-}
 
 }

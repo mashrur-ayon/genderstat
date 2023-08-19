@@ -16,10 +16,9 @@ A numeric vector representing the GEM values.
 Computes the Gender Empowerment Measure (GEM) based on the provided dataset.
 }
 \examples{
-\dontrun{
-data(gender_empowerment_measure_data) # Load example dataset
-gem_results <- gender_empowerment_measure(gender_empowerment_measure_data)
+
+data(real_data_GEM) # Load example dataset
+gem_results <- gender_empowerment_measure(real_data_GEM)
 print(gem_results)
-}
 
 }

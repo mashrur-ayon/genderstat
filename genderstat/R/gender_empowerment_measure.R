@@ -7,34 +7,37 @@
 #' @return A numeric vector representing the GEM values.
 #'
 #' @examples
-#' \dontrun{
-#' data(gender_empowerment_measure_data) # Load example dataset
-#' gem_results <- gender_empowerment_measure(gender_empowerment_measure_data)
+#'
+#' data(real_data_GEM) # Load example dataset
+#' gem_results <- gender_empowerment_measure(real_data_GEM)
 #' print(gem_results)
-#' }
 #'
 #' @export
 gender_empowerment_measure <- function(data) {
   ...
 }
 
-
-#' Simulated Data for Gender Empowerment Measure (GEM)
+#' Original Data for Gender Empowerment Measure (GEM)
 #'
-#' A dataset containing simulated values for the GEM analysis.
+#' A dataset containing observed values for the GEM analysis.
 #'
-#' @format A data frame with 200 rows and 4 columns:
+#' @format A data frame with 191 rows and 4 columns:
 #' \describe{
 #'   \item{country}{A character vector representing the name of the country.}
 #'   \item{female_parliament_seats}{A numeric vector representing the ratio of parliamentary seats occupied by females in the respective country. Measured as a proportion (0-1).}
 #'   \item{female_professional_positions}{A numeric vector representing the ratio of professional and technical job roles occupied by females in the respective country. Measured as a proportion (0-1).}
 #'   \item{female_to_male_earned_income_ratio}{A numeric vector representing the income ratio for females in the respective country in comparison to males. Measured as a proportion (0-1), where 1 indicates equal income with males.}
 #' }
-#' @source The dataset is simulated for the purpose of this package.
-#' @name simulated_data_GEM
+#' @source Data obtained from the following sources:
+#' \itemize{
+#'   \item{\href{https://hdr.undp.org/data-center/documentation-and-downloads}{UNDP Human Development Reports Data Center}}
+#'   \item{\href{https://genderdata.worldbank.org/indicators/}{World Bank Gender Data Portal}}
+#' }
+#' @name real_data_GEM
 #' @docType data
-#' @usage data(simulated_data_GEM)
+#' @usage data(real_data_GEM)
 NULL
+
 
 #################################################################################
 
@@ -57,6 +60,5 @@ gender_empowerment_measure <- function(data) {
 
   return(GEM)
 }
-
 
 

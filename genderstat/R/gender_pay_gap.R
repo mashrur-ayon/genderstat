@@ -6,52 +6,53 @@
 #'
 #' @return A numeric vector representing the GPG values.
 #' @importFrom stats aggregate
+#'
 #' @examples
-#' \dontrun{
-#' data(gender_pay_gap_data) # Load example dataset
-#' gpg_results <- gender_pay_gap(gender_pay_gap_data)
+#'
+#' data(real_data_GPG) # Load example dataset
+#' gpg_results <- gender_pay_gap(real_data_GPG)
 #' print(gpg_results)
-#' }
 #'
 #' @export
 gender_pay_gap <- function(data) {
   ...
 }
 
-
-#' Simulated Data for Gender Pay Gap (GPG)
+#' Original Data for Gender Pay Gap (GPG)
 #'
-#' A dataset containing simulated values for the GPG analysis.
+#' A dataset containing observed values for the GPG analysis.
 #'
-#' @format A data frame with 200 rows and 3 columns:
+#' @format A data frame with 191 rows and 3 columns:
 #' \describe{
-#'   \item{person}{Simulated ID of person}
-#'   \item{gender}{Identified Gender}
-#'   \item{salary}{Salary of the person}
+#'   \item{country}{Name of Country}
+#'   \item{female_income}{Per capita female National Income}
+#'   \item{male_income}{Per capita male National Income}
 #' }
-#' @source The dataset is simulated for the purpose of this package.
-#' @name simulated_data_GPG
+#' @source Data obtained from the following sources:
+#' \itemize{
+#'   \item{\href{https://hdr.undp.org/data-center/documentation-and-downloads}{UNDP Human Development Reports Data Center}}
+#'   \item{\href{https://genderdata.worldbank.org/indicators/}{World Bank Gender Data Portal}}
+#' }
+#' @name real_data_GPG
 #' @docType data
-#' @usage data(simulated_data_GPG)
+#' @usage data(real_data_GPG)
 NULL
+
 
 ##########################################################
 ##########################################################
 
 gender_pay_gap <- function(data) {
   # Check input data for required columns
-  if (!all(c("salary", "gender") %in% colnames(data))) {
-    stop("The input data must contain 'salary' and 'gender' columns.")
+  if (!all(c("female_income", "male_income") %in% colnames(data))) {
+    stop("The input data must contain 'female_income' and 'male_income' columns.")
   }
 
-  # Calculate the average salary for each gender
-  avg_salaries <- aggregate(salary ~ gender, data, mean)
+  # Calculate the gender pay gap for each country
+  data$gpg <- ((data$male_income - data$female_income) / data$male_income) * 100
 
-  # Calculate the gender pay gap
-  gpg <- (avg_salaries$salary[avg_salaries$gender == "male"] -
-            avg_salaries$salary[avg_salaries$gender == "female"]) /
-    avg_salaries$salary[avg_salaries$gender == "male"] * 100
-
-  return(gpg)
+  # Return the results
+  return(data[, c("country", "gpg")])
 }
+
 
