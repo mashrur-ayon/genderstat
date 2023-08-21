@@ -70,7 +70,13 @@ gender_development_index <- function(data) {
   # Calculate GDI
   GDI <- female_hdi / (female_hdi + male_hdi)
 
-  return(GDI)
+  # Create a data frame with required columns for plotting
+  result_data <- data.frame(
+    country = data$country,
+    GDI = GDI,
+    female_hdi = female_hdi,
+    male_hdi = male_hdi
+  )
+
+  return(result_data)
 }
-
-
