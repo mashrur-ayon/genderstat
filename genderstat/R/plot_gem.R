@@ -5,11 +5,11 @@ library(reshape2)
 #' @noRd
 .data <- dplyr::.data
 
-#' Plot Gender Empowerment Measure (GEM) for Top 15 Countries
+#' Plot Gender Empowerment Measure (GEM) for 15 Countries
 #'
 #' Visualizes the Gender Empowerment Measure (GEM) along with other metrics
 #' such as female parliament seats, female professional positions, and
-#' female to male earned income ratio for the top 15 countries based on GEM.
+#' female to male earned income ratio for 15 countries based on GEM.
 #'
 #' @param data A data frame containing the required metrics for GEM visualization.
 #'
@@ -38,7 +38,7 @@ plot_gem <- function(data) {
   # Compute GEM
   data$GEM <- gender_empowerment_measure(data)
 
-  # Sort data based on GEM and take top 15 countries
+  # Sort data based on GEM and take 15 countries
   top_15_data <- data[order(-data$GEM), ][1:15, ]
 
   # Melt the data for plotting
@@ -52,7 +52,7 @@ plot_gem <- function(data) {
                                            y = "Value",
                                            fill = "Metric")) +
     ggplot2::geom_bar(stat = "identity", position = "dodge") +
-    ggplot2::labs(title = "Top 15 Countries by Gender Empowerment Measure (GEM)",
+    ggplot2::labs(title = "15 Countries by Gender Empowerment Measure (GEM)",
                   x = "Country", y = "Value") +
     ggplot2::theme_minimal() +
     ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 45, hjust = 1))

@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot_gem.R
 \name{plot_gem}
 \alias{plot_gem}
-\title{Plot Gender Empowerment Measure (GEM) for Top 15 Countries}
+\title{Plot Gender Empowerment Measure (GEM) for 15 Countries}
 \usage{
 plot_gem(data)
 }
@@ -15,7 +15,7 @@ A ggplot object representing the bar chart of the GEM and other metrics.
 \description{
 Visualizes the Gender Empowerment Measure (GEM) along with other metrics
 such as female parliament seats, female professional positions, and
-female to male earned income ratio for the top 15 countries based on GEM.
+female to male earned income ratio for 15 countries based on GEM.
 }
 \examples{
 

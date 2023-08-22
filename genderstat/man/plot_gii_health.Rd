@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot_gii.R
 \name{plot_gii_health}
 \alias{plot_gii_health}
-\title{Plot Health Indicators (Maternal Mortality and Adolescent Birth Rate) for Top 15 Countries}
+\title{Plot Health Indicators (Maternal Mortality and Adolescent Birth Rate) for Bottom 15 Countries}
 \usage{
 plot_gii_health(data)
 }
@@ -10,10 +10,10 @@ plot_gii_health(data)
 \item{data}{A data frame containing the required metrics for GII computation.}
 }
 \value{
-A ggplot2 object visualizing maternal mortality and adolescent birth rate for the top 15 countries.
+A ggplot2 object visualizing maternal mortality and adolescent birth rate for the bottom 15 countries.
 }
 \description{
-Plot Health Indicators (Maternal Mortality and Adolescent Birth Rate) for Top 15 Countries
+Plot Health Indicators (Maternal Mortality and Adolescent Birth Rate) for Bottom 15 Countries
 }
 \examples{
 data(real_data_GII) # Load example dataset

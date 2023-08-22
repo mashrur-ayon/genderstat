@@ -5,10 +5,10 @@ library(reshape2)
 #' @noRd
 .data <- dplyr::.data
 
-#' Plot Gender Development Index (GDI) for Top 15 Countries
+#' Plot Gender Development Index (GDI) for Bottom 15 Countries
 #'
 #' @param data A data frame containing the required metrics for GDI computation.
-#' @return A ggplot2 object visualizing the GDI for the top 15 countries.
+#' @return A ggplot2 object visualizing the GDI for the bottom 15 countries.
 #' @importFrom ggplot2 ggplot aes geom_bar coord_flip labs theme_minimal
 #' @importFrom utils head
 #' @importFrom stats reorder
@@ -28,7 +28,7 @@ plot_gdi <- function(data) {
   ggplot2::ggplot(top_gdi, aes(x = stats::reorder(.data$country, .data$GDI), y = .data$GDI)) +
     geom_bar(stat = "identity", fill = "#56B4E9") +
     coord_flip() +
-    labs(title = "Top 15 Countries by Gender Development Index (GDI)",
+    labs(title = "Bottom 15 Countries by Gender Development Index (GDI)",
          x = "Country",
          y = "GDI Value") +
     theme_minimal()
@@ -36,10 +36,10 @@ plot_gdi <- function(data) {
 
 
 
-#' Plot Human Development Index (HDI) for Top 15 Countries by Gender
+#' Plot Human Development Index (HDI) for Bottom 15 Countries by Gender
 #'
 #' @param data A data frame containing the required metrics for GDI and HDI computation.
-#' @return A ggplot2 object visualizing the HDI for males and females in the top 15 countries.
+#' @return A ggplot2 object visualizing the HDI for males and females in the bottom 15 countries.
 #' @importFrom ggplot2 ggplot aes geom_point coord_flip labs theme_minimal scale_color_manual
 #' @import dplyr
 #' @import reshape2
@@ -60,7 +60,7 @@ plot_hdi <- function(data) {
   ggplot2::ggplot(melted_data, aes(x = .data$country, y = .data$hdi, color = .data$gender)) +
     geom_point(position = ggplot2::position_dodge(width = 0.5), size = 3) +
     coord_flip() +
-    labs(title = "Human Development Index (HDI) for Top 15 Countries by Gender",
+    labs(title = "Human Development Index (HDI) for Bottom 15 Countries by Gender",
          x = "Country",
          y = "HDI Value") +
     theme_minimal() +

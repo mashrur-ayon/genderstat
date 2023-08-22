@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot_gdi.R
 \name{plot_gdi}
 \alias{plot_gdi}
-\title{Plot Gender Development Index (GDI) for Top 15 Countries}
+\title{Plot Gender Development Index (GDI) for Bottom 15 Countries}
 \usage{
 plot_gdi(data)
 }
@@ -10,10 +10,10 @@ plot_gdi(data)
 \item{data}{A data frame containing the required metrics for GDI computation.}
 }
 \value{
-A ggplot2 object visualizing the GDI for the top 15 countries.
+A ggplot2 object visualizing the GDI for the bottom 15 countries.
 }
 \description{
-Plot Gender Development Index (GDI) for Top 15 Countries
+Plot Gender Development Index (GDI) for Bottom 15 Countries
 }
 \examples{
 data(real_data_GDI) # Load example dataset

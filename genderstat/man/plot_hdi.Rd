@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot_gdi.R
 \name{plot_hdi}
 \alias{plot_hdi}
-\title{Plot Human Development Index (HDI) for Top 15 Countries by Gender}
+\title{Plot Human Development Index (HDI) for Bottom 15 Countries by Gender}
 \usage{
 plot_hdi(data)
 }
@@ -10,10 +10,10 @@ plot_hdi(data)
 \item{data}{A data frame containing the required metrics for GDI and HDI computation.}
 }
 \value{
-A ggplot2 object visualizing the HDI for males and females in the top 15 countries.
+A ggplot2 object visualizing the HDI for males and females in the bottom 15 countries.
 }
 \description{
-Plot Human Development Index (HDI) for Top 15 Countries by Gender
+Plot Human Development Index (HDI) for Bottom 15 Countries by Gender
 }
 \examples{
 data(real_data_GDI) # Load example dataset

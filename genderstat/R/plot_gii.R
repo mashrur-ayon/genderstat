@@ -2,18 +2,18 @@ library(ggplot2)
 library(dplyr)
 
 
-#' Compute Gender Inequality Index (GII) and Select Top 15 Countries
+#' Compute Gender Inequality Index (GII) and Select Bottom 15 Countries
 #'
 #' This is an internal helper function to compute the GII for each country in the data
-#' and then select the top 15 countries based on their GII values.
+#' and then select the bottom 15 countries based on their GII values.
 #'
 #' @param data A data frame containing the required metrics for GII computation.
-#' @return A data frame of the top 15 countries sorted by GII values.
+#' @return A data frame of the bottom 15 countries sorted by GII values.
 #' @import dplyr
 #' @keywords internal
 
 
-# Helper function to compute GII and select top 15 countries
+# Helper function to compute GII and select bottom 15 countries
 compute_gii <- function(data) {
   data$GII <- 1 - (data$maternal_mortality_ratio / (data$maternal_mortality_ratio + data$adolescent_birth_rate) *
                      data$female_parliament_seats * data$female_secondary_education /
@@ -28,10 +28,10 @@ compute_gii <- function(data) {
 }
 
 
-#' Plot Gender Inequality Index (GII) for Top 15 Countries
+#' Plot Gender Inequality Index (GII) for Bottom 15 Countries
 #'
 #' @param data A data frame containing the required metrics for GII computation.
-#' @return A ggplot2 object visualizing the GII for the top 15 countries.
+#' @return A ggplot2 object visualizing the GII for the bottom 15 countries.
 #' @importFrom ggplot2 ggplot aes geom_bar theme labs element_text
 #' @import dplyr
 #' @examples
@@ -53,10 +53,10 @@ plot_gii <- function(data) {
 
 
 
-#' Plot Health Indicators (Maternal Mortality and Adolescent Birth Rate) for Top 15 Countries
+#' Plot Health Indicators (Maternal Mortality and Adolescent Birth Rate) for Bottom 15 Countries
 #'
 #' @param data A data frame containing the required metrics for GII computation.
-#' @return A ggplot2 object visualizing maternal mortality and adolescent birth rate for the top 15 countries.
+#' @return A ggplot2 object visualizing maternal mortality and adolescent birth rate for the bottom 15 countries.
 #' @importFrom ggplot2 ggplot aes geom_bar theme labs scale_fill_manual element_text
 #' @import dplyr
 #' @examples
@@ -78,10 +78,10 @@ plot_gii_health <- function(data) {
   return(p)
 }
 
-#' Plot Female Parliament Seats for Top 15 Countries
+#' Plot Female Parliament Seats for Bottom 15 Countries
 #'
 #' @param data A data frame containing the required metrics for GII computation.
-#' @return A ggplot2 object visualizing female parliament seats for the top 15 countries.
+#' @return A ggplot2 object visualizing female parliament seats for the bottom 15 countries.
 #' @importFrom ggplot2 ggplot aes geom_bar theme labs element_text
 #' @import dplyr
 #' @examples
@@ -103,10 +103,10 @@ plot_gii_empowerment <- function(data) {
 }
 
 
-#' Plot Labor Force Participation for Top 15 Countries by Gender
+#' Plot Labor Force Participation for Bottom 15 Countries by Gender
 #'
 #' @param data A data frame containing the required metrics for GII computation.
-#' @return A ggplot2 object visualizing the labor force participation for males and females in the top 15 countries.
+#' @return A ggplot2 object visualizing the labor force participation for males and females in the bottom 15 countries.
 #' @importFrom ggplot2 ggplot aes geom_point theme labs scale_color_manual element_text
 #' @import dplyr
 #' @examples
@@ -128,10 +128,10 @@ plot_gii_labor <- function(data) {
 }
 
 
-#' Plot Secondary Education Participation for Top 15 Countries by Gender
+#' Plot Secondary Education Participation for Bottom 15 Countries by Gender
 #'
 #' @param data A data frame containing the required metrics for GII computation.
-#' @return A ggplot2 object visualizing the secondary education participation for males and females in the top 15 countries.
+#' @return A ggplot2 object visualizing the secondary education participation for males and females in the bottom 15 countries.
 #' @importFrom ggplot2 ggplot aes geom_point theme labs scale_color_manual element_text
 #' @import dplyr
 #' @examples

@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot_gii.R
 \name{plot_gii_empowerment}
 \alias{plot_gii_empowerment}
-\title{Plot Female Parliament Seats for Top 15 Countries}
+\title{Plot Female Parliament Seats for Bottom 15 Countries}
 \usage{
 plot_gii_empowerment(data)
 }
@@ -10,10 +10,10 @@ plot_gii_empowerment(data)
 \item{data}{A data frame containing the required metrics for GII computation.}
 }
 \value{
-A ggplot2 object visualizing female parliament seats for the top 15 countries.
+A ggplot2 object visualizing female parliament seats for the bottom 15 countries.
 }
 \description{
-Plot Female Parliament Seats for Top 15 Countries
+Plot Female Parliament Seats for Bottom 15 Countries
 }
 \examples{
 data(real_data_GII) # Load example dataset
