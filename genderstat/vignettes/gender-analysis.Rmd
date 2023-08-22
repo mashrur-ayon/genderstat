@@ -1,0 +1,45 @@
+---
+title: "Introduction to genderstat"
+author: "S M Mashrur Arafin Ayon"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to genderstat}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+## Introduction
+
+The `genderstat` package provides tools for quantitative analysis in gender studies. This includes computation of various gender inequality metrics and visualization tools.
+
+
+## Gender Empowerment Measure (GEM)
+
+The Gender Empowerment Measure (GEM) evaluates gender equality in terms of economy, political participation, and decision making. 
+
+```{r}
+# Load the required libraries and data
+data(real_data_GEM)
+
+# Compute the GEM
+gem_results <- gender_empowerment_measure(real_data_GEM)
+print(gem_results)
+```
+
+
+## Gender Development Index (GDI)
+
+The Gender Development Index (GDI) measures gender inequalities across three basic dimensions: health, knowledge, and living standards. 
+
+```{r}
+# Load the required data
+data(real_data_GDI)
+
+# Compute the GDI
+gdi_results <- gender_development_index(real_data_GDI)
+print(gdi_results)
+```
+
+
