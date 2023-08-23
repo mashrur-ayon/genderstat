@@ -6,24 +6,24 @@
 #'
 #' @return A numeric vector representing the GDI values.
 #'
+#'
 #' @examples
-#' \dontrun{
-#' data(gender_development_index_data) # Load example dataset
-#' gdi_results <- gender_development_index(gender_development_index_data)
+#'
+#' data(real_data_GDI) # Load example dataset
+#' gdi_results <- gender_development_index(real_data_GDI)
 #' print(gdi_results)
-#' }
+#'
 #'
 #' @export
 gender_development_index <- function(data) {
   ...
 }
 
-
-#' Simulated Data for Gender Development Index (GDI)
+#' Original Data of GDI (GDI)
 #'
-#' A dataset containing simulated values for the GDI analysis.
+#' A dataset containing observed values for the GDI analysis.
 #'
-#' @format A data frame with 200 rows and 7 columns:
+#' @format A data frame with 191 rows and 7 columns:
 #' \describe{
 #'   \item{country}{A character vector representing the name of the country.}
 #'   \item{female_life_expectancy}{A numeric vector representing the life expectancy of females in the respective country. Measured in years.}
@@ -33,13 +33,15 @@ gender_development_index <- function(data) {
 #'   \item{female_gni_per_capita}{A numeric vector representing the Gross National Income per capita for females in the respective country. Measured in international dollars.}
 #'   \item{male_gni_per_capita}{A numeric vector representing the Gross National Income per capita for males in the respective country. Measured in international dollars.}
 #' }
-#' @source The dataset is simulated for the purpose of this package.
-#' @name simulated_data_GDI
+#' @source Data obtained from the following sources:
+#' \itemize{
+#'   \item{\href{https://hdr.undp.org/data-center/documentation-and-downloads}{UNDP Human Development Reports Data Center}}
+#'   \item{\href{https://genderdata.worldbank.org/indicators/}{World Bank Gender Data Portal}}
+#' }
+#' @name real_data_GDI
 #' @docType data
-#' @usage data(simulated_data_GDI)
+#' @usage data(real_data_GDI)
 NULL
-
-
 ###########################################################
 
 gender_development_index <- function(data) {
@@ -68,9 +70,13 @@ gender_development_index <- function(data) {
   # Calculate GDI
   GDI <- female_hdi / (female_hdi + male_hdi)
 
-  return(GDI)
+  # Create a data frame with required columns for plotting
+  result_data <- data.frame(
+    country = data$country,
+    GDI = GDI,
+    female_hdi = female_hdi,
+    male_hdi = male_hdi
+  )
+
+  return(result_data)
 }
-
-
-
-

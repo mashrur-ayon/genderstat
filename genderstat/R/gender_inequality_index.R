@@ -7,23 +7,21 @@
 #' @return A numeric vector representing the GII values.
 #'
 #' @examples
-#' \dontrun{
-#' data(gender_inequality_index_data) # Load example dataset
-#' gii_results <- gender_inequality_index(gender_inequality_index_data)
+#'
+#' data(real_data_GII) # Load example dataset
+#' gii_results <- gender_inequality_index(real_data_GII)
 #' print(gii_results)
-#' }
 #'
 #' @export
 gender_inequality_index <- function(data) {
   ...
 }
 
-
-#' Simulated Data for Gender Inequality Index (GII)
+#' Original Data for Gender Inequality Index (GII)
 #'
-#' A dataset containing simulated values for the GII analysis.
+#' A dataset containing observed values for the GII analysis.
 #'
-#' @format A data frame with 200 rows and 6 columns:
+#' @format A data frame with 191 rows and 8 columns:
 #' \describe{
 #'   \item{country}{A character vector representing the name of the country.}
 #'   \item{maternal_mortality_ratio}{Maternal Mortality Ratio.}
@@ -33,13 +31,17 @@ gender_inequality_index <- function(data) {
 #'   \item{male_secondary_education}{Male Secondary Education.}
 #'   \item{female_labor_force}{Participation of female in labour force.}
 #'   \item{male_labor_force}{Participation of male in labour force.}
-#'
-#'   }
-#' @source The dataset is simulated for the purpose of this package.
-#' @name simulated_data_GII
+#' }
+#' @source Data obtained from the following sources:
+#' \itemize{
+#'   \item{\href{https://hdr.undp.org/data-center/documentation-and-downloads}{UNDP Human Development Reports Data Center}}
+#'   \item{\href{https://genderdata.worldbank.org/indicators/}{World Bank Gender Data Portal}}
+#' }
+#' @name real_data_GII
 #' @docType data
-#' @usage data(simulated_data_GII)
+#' @usage data(real_data_GII)
 NULL
+
 
 ############################################################################
 

@@ -16,10 +16,9 @@ A numeric vector representing the GII values.
 Computes the Gender Inequality Index (GII) based on the provided dataset.
 }
 \examples{
-\dontrun{
-data(gender_inequality_index_data) # Load example dataset
-gii_results <- gender_inequality_index(gender_inequality_index_data)
+
+data(real_data_GII) # Load example dataset
+gii_results <- gender_inequality_index(real_data_GII)
 print(gii_results)
-}
 
 }

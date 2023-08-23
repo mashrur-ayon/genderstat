@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: genderstat
+Version: 0.1.0
+Summary: Quantitative Analysis Tools for Gender Studies in Python
+Home-page: https://github.com/mashrur-ayon/genderstat/tree/genderstat-python
+Author: S M Mashrur Arafin Ayon
+Author-email: mashrur399@gmail.com
+License: MIT
+Keywords: gender analysis statistics

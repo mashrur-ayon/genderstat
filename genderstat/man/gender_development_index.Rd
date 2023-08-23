@@ -16,10 +16,10 @@ A numeric vector representing the GDI values.
 Computes the Gender Development Index (GDI) based on the given dataset.
 }
 \examples{
-\dontrun{
-data(gender_development_index_data) # Load example dataset
-gdi_results <- gender_development_index(gender_development_index_data)
+
+data(real_data_GDI) # Load example dataset
+gdi_results <- gender_development_index(real_data_GDI)
 print(gdi_results)
-}
+
 
 }
