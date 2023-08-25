@@ -1,62 +1,79 @@
-# genderstat: An R Package for Gender Studies Quantitative Analysis
+# genderstat: R Package for Analytical Exploration of Gender Metrics by Country 
 
-`genderstat` is an R package designed to help gender studies students and researchers conduct quantitative analysis on various aspects of gender inequality. The package includes functions to calculate key gender inequality metrics and offers datasets for hands-on practice.
+`genderstat` is an R package designed to support the comprehensive exploration of the "gender-metrics-by-country" dataset. It facilitates data visualization and analysis, helping researchers delve into gender inequality metrics and understand gender disparities across various countries. The package offers functions to visualize pivotal metrics such as the Gender Development Index (GDI), Human Development Index (HDI), Maternal Mortality Ratio (MMR), Adolescent Birth Rate (ABR), and more.
 
-## Installation
 
-You can install the latest version of `genderstat` from GitHub with:
 
-```R
-# Install the 'devtools' package if not already installed
-if (!requireNamespace("devtools", quietly = TRUE)) {
-  install.packages("devtools")
-}
+# Overview: <img src="https://github.com/mashrur-ayon/genderstat/blob/main/plots-pictures/genderstat-logo.png" align="right" height="200">
+The genderstat R package is a comprehensive tool designed to facilitate quantitative analysis in the realm of gender studies. Developed by S M Mashrur Arafin Ayon, this package stands at version 0.1.3 and serves as an invaluable asset for researchers, students, and professionals in gender studies.
 
-# Install 'genderstat' from GitHub
-devtools::install_github("mashrur-ayon/genderstat")
+## Features:
+- Functions for Key Gender Metrics: The package boasts an array of functions tailored to compute various gender inequality metrics. Notably, it can calculate the Gender Pay Gap, Gender Inequality Index (GII), Gender Development Index (GDI), and the Gender Empowerment Measure (GEM).
+
+- Inclusive Datasets: genderstat is enriched with real datasets extracted from reputable sources, specifically the UNDP Human Development Reports Data Center and the World Bank Gender Data Portal. These datasets serve as a practical resource for hands-on practice and in-depth learning.
+
+- Dependencies and Utilities: The package leverages the capabilities of other notable R packages such as `ggplot2`, `dplyr`, and `reshape2`. For those keen on testing and documentation, `testthat`, `knitr`, and `rmarkdown` are suggested.
+
+Installation
+To use `genderstat` effectively, you'll also need the `tidyverse` and `ggplot2` packages:
+
+```
+install.packages("tidyverse")
+install.packages("ggplot2")
+install.packages("genderstat")
+Loading Required Packages
 ```
 
-## Functions
-
-The package provides functions for calculating the following metrics related to gender inequality:
-
-1. Gender Pay Gap
-2. Gender Inequality Index (GII)
-3. Gender Development Index (GDI)
-4. Occupational Segregation Indices (e.g., Index of Dissimilarity)
-5. Gender Empowerment Measure (GEM)
-6. Time-use Analysis Metrics (e.g., gender time gap in unpaid work)
-
-## Datasets
-
-`genderstat` includes sample datasets related to gender inequality that can be used for practice and learning purposes. Detailed information about each dataset, including its source and variables, can be found in the package documentation.
-
-## Usage
-
-Here's a simple example of how to use `genderstat` to calculate the Gender Pay Gap:
-
-```R
-# Load the package
+```
+library(tidyverse)
 library(genderstat)
-
-# Load a sample dataset containing salary data for men and women
-data("sample_salary_data")
-
-# Calculate the Gender Pay Gap
-gpg <- gender_pay_gap(sample_salary_data)
-
-# Print the result
-print(gpg)
 ```
 
-## Documentation and Tutorials
+## Key Visualizations and Analyses
+With `genderstat`, you can perform a range of visualizations and analyses:
 
-For more detailed information on each function, please refer to the package documentation. Additionally, vignettes are provided to guide users through the process of conducting gender-based data analysis using the `genderstat` package.
+Gender Development Index (GDI): Visualize the disparities in achievements between women and men in health, education, and decent standards of living.
 
-## Contributing
+```
+data <- read_csv("/path/to/your/data.csv")
+# you can also load example data
 
-We welcome contributions to the `genderstat` package. If you would like to contribute, please feel free to open an issue or submit a pull request on GitHub.
+data(real_data_GDI)
 
-## License
+gender_development_index(data)
+```
+## Bar Diagram Analysis: Assess gender-based development achievements using bar diagrams.
 
-`genderstat` is released under the [MIT License](LICENSE.md).
+```
+plot_gdi(data)
+```
+
+## Comparative Analysis of HDIs: Present a side-by-side comparison of the Male and Female HDIs.
+
+```
+plot_hdi(data)
+```
+
+## Maternal Mortality Ratio and Adolescent Birth Rate: Use stacked bar plots to visualize these critical health metrics.
+
+```
+plot_gii_health(data)
+```
+
+## Secondary Education Participation: Compare female and male participation in secondary education.
+
+R
+Copy code
+plot_gii_education(data)
+Labor Force Participation with Dot Plots: Analyze labor force participation rates with precise visual representations.
+
+```
+plot_gii_labor(data)
+```
+
+# Contributing
+I welcome contributions to the genderstat package. If you would like to contribute, please open an issue or submit a pull request on GitHub.
+
+# License
+
+genderstat is released under the MIT License.
