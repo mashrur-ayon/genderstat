@@ -1,4 +1,6 @@
-# genderstat: R Package for Analytical Exploration of Gender Metrics by Country 
+# genderstat: R Package for Analytical Exploration of Gender Metrics by Country [![CRAN status](https://www.r-pkg.org/badges/version/genderstat)](https://cran.r-project.org/web/packages/genderstat/index.html)
+
+
 
 `genderstat` is an R package designed to support the comprehensive exploration of the "gender-metrics-by-country" dataset. It facilitates data visualization and analysis, helping researchers delve into gender inequality metrics and understand gender disparities across various countries. The package offers functions to visualize pivotal metrics such as the Gender Development Index (GDI), Human Development Index (HDI), Maternal Mortality Ratio (MMR), Adolescent Birth Rate (ABR), and more.
 
@@ -76,4 +78,5 @@ I welcome contributions to the genderstat package. If you would like to contribu
 
 # License
 
-genderstat is released under the MIT License.
+genderstat is released under the [MIT License](https://github.com/mashrur-ayon/genderstat/blob/main/genderstat/LICENSE.md)
+.
