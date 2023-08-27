@@ -11,12 +11,12 @@ tags:
 
 author: 
 - name: S M Mashrur Arafin Ayon
--affiliation: 1
+  affiliation: 1
 
 affiliations: 
 
 - name: Department of Women and Gender Studies, University of Dhaka
-   index: 1
+  index: 1
    
 date: 25 August 2023
 bibliography: reference.bib
