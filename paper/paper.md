@@ -25,14 +25,14 @@ bibliography: reference.bib
 # Draft 1
 # Summary
 
-- Brief introduction to the `genderstat` package.
+- Brief introduction to the `genderstat` package. 
 - Its main functionalities and purpose.
 - What differentiates it from other similar packages or tools, if applicable.
 
 
 # Core Theoretical Concepts
 
-- Frameworks or methodologies the package is built upon.
+- Frameworks or methodologies the package is built upon. [@ferrant_2010_the]
 - Statistical or computational models used.
 - Any pre-existing theories or principles integrated into the package.
 
@@ -47,3 +47,5 @@ bibliography: reference.bib
 - Practical uses of the package: specific case studies or examples.
 - How it fits into larger research projects or workflows.
 - Potential impact in real-world scenarios (e.g., policy-making, awareness campaigns, educational settings).
+
+# References
