@@ -32,7 +32,7 @@ bibliography: reference.bib
 
 # Core Theoretical Concepts
 
-- Frameworks or methodologies the package is built upon. [@ferrant_2010_the]
+- Frameworks or methodologies the package is built upon [wickham_2007_reshaping].
 - Statistical or computational models used.
 - Any pre-existing theories or principles integrated into the package.
 
