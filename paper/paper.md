@@ -102,63 +102,6 @@ Where:
 For researchers examining gender issues, it is crucial to understand both the quantitative and qualitative aspects of any form of discrimination. Although 'genderstat' is not designed for qualitative analysis, it holds a distinctive position as the first and, to date, the only dedicated R package available on CRAN for analyzing and visualizing gender metrics. Inspired by the core principles of open-source software, this package empowers researchers to examine the underlying factors contributing to discrimination in society.
 
 # Application
-Application and Basic Structure of the package:
 
-![Basic Structure](https://github.com/mashrur-ayon/genderstat/blob/main/plots-pictures/basic-structure.png)
-
-
-Key Visualizations and Analyses
-With `genderstat`, you can perform a range of visualizations and analyses:
-
-Gender Development Index (GDI): Visualize the disparities in achievements between women and men in health, education, and decent standards of living.
-
-```R
-# In this case, I am loading example data from the package
-# If you want to load your CSV then follow: data <- read_csv("/path/to/your/data.csv") 
-
-gender_development_index(real_data_GDI)
-```
-
-Output:
-
-Gender Pay Gap:
-```R
-gender_pay_gap(real_data_GPG)
-```
-
-Output:
-
-
-```R
-plot_gdi(real_data_GDI)
-```
-
-Output: 
-
-![Basic Structure](https://github.com/mashrur-ayon/genderstat/blob/main/plots-pictures/plot_gdi_output.png)
-
-Comparative Analysis of HDIs: Present a side-by-side comparison of the Male and Female HDIs.
-
-```R
-plot_hdi(real_data_GDI)
-```
-Output:
-
-![Basic Structure](https://github.com/mashrur-ayon/genderstat/blob/main/plots-pictures/plot_hdi_output.png)
-
-Maternal Mortality Ratio and Adolescent Birth Rate: Use stacked bar plots to visualize these critical health metrics.
-```R
-plot_gii_health(real_data_GII)
-
-```
-
-Output:
-
-![Basic Structure](https://github.com/mashrur-ayon/genderstat/blob/main/plots-pictures/plot_gii_health_output.png)
-
-
-- Practical uses of the package: specific case studies or examples.
-- How it fits into larger research projects or workflows.
-- Potential impact in real-world scenarios (e.g., policy-making, awareness campaigns, educational settings).
 
 # References
