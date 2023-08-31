@@ -42,8 +42,7 @@ For researchers examining gender issues, it is crucial to understand both the qu
 # Application
 Application and Basic Structure of the package is as follows:
 
-![Basic Structure]([https://github.com/mashrur-ayon/genderstat/blob/main/plots-pictures/basic-structure.png](https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/basic-structure.png
-))
+![Basic Structure](https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/basic-structure.png)
 
 
 - Practical uses of the package: specific case studies or examples.
