@@ -35,9 +35,10 @@ This package is primarily constructed to assist researchers in the social scienc
 The Gender Pay Gap is a measure that reflects the disparity between the average income of men and women. It is commonly expressed as a percentage and indicates the difference in the average earnings of men and women in the workforce. A higher percentage indicates a greater disparity between male and female earnings, whereas a 0% pay gap would signify complete gender equality in terms of pay. The gender pay gap is a crucial indicator of gender inequality and is influenced by various factors including, but not limited to, discrimination, differences in occupation and hours worked, and disparities in opportunities for career progression.
 The Gender Pay Gap is calculated using the following formula:
 
-\[
+$$
 \text{Gender Pay Gap} = \left(\frac{\text{Male income} - \text{Female income}}{\text{Male income}}\right) \times 100
-\]
+$$
+
 
 
 # Statement of Need
