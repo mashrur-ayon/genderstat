@@ -40,16 +40,9 @@ This package is primarily constructed to assist researchers in the social scienc
 For researchers examining gender issues, it is crucial to understand both the quantitative and qualitative aspects of any form of discrimination. Although 'genderstat' is not designed for qualitative analysis, it holds a distinctive position as the first and, to date, the only dedicated R package available on CRAN for analyzing and visualizing gender metrics. Inspired by the core principles of open-source software, this package empowers researchers to examine the underlying factors contributing to discrimination in society.
 
 # Application
-Application and Basic Structure of the package:
+Application and Basic Structure of the package is as follows:
 
-The available functions, and the example data available:
-
-| Core Theoretical Concept | Analysis Function               | Visualization Function | Example Dataset | Variables of the dataset |
-|---------------------------|----------------------------------|------------------------|------------------|--------------------------|
-| Gender Development Index  | `gender_development_index()`     | 1. `plot_gdi()`<br>2. `plot_hdi()` | `real_data_GDI` | • Country<br>• female_life_expectancy<br>• male_life_expectancy<br>• female_mean_schooling<br>• male_mean_schooling<br>• female_gni_per_capita<br>• male_gni_per_capita |
-| Gender Inequality Index  | `gender_inequality_index()`      | 1. `plot_gii()`<br>2. `plot_gii_education()`<br>3. `plot_gii_empowerment()`<br>4. `plot_gii_health()`<br>5. `plot_gii_labor()` | `real_data_GII` | • Country<br>• maternal_mortality_ratio<br>• adolescent_birth_rate<br>• female_parliament_seats<br>• female_secondary_education<br>• male_secondary_education<br>• female_labor_force<br>• male_labor_force |
-| Gender Empowerment Measure| `gender_empowerment_measure()`   | 1. `plot_gem()` | `real_data_GEM` | • Country<br>• female_parliament_seats<br>• female_professional_positions<br>• female_to_male_earned_income_ratio |
-| Gender Pay Gap            | `gender_pay_gap()`               | 2. `plot_gpg()`<br>3. `plot_gpg_q1()`<br>4. `plot_gpg_q2()`<br>5. `plot_gpg_q3()`<br>6. `plot_gpg_q4()` | `real_data_GPG` | • country<br>• female_income<br>• male_income |
+![Basic Structure](https://github.com/mashrur-ayon/genderstat/blob/main/plots-pictures/basic-structure.png)
 
 
 - Practical uses of the package: specific case studies or examples.
