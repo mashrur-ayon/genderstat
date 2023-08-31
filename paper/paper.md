@@ -34,11 +34,6 @@ This package is primarily constructed to assist researchers in the social scienc
 
 
 
-
-# Statement of Need
-
-For researchers examining gender issues, it is crucial to understand both the quantitative and qualitative aspects of any form of discrimination. Although 'genderstat' is not designed for qualitative analysis, it holds a distinctive position as the first and, to date, the only dedicated R package available on CRAN for analyzing and visualizing gender metrics. Inspired by the core principles of open-source software, this package empowers researchers to examine the underlying factors contributing to discrimination in society.
-
 # Application
 Application and Basic Structure of the package:
 
