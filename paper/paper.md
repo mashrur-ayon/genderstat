@@ -45,8 +45,8 @@ The simplified formula for GII is:
 $$\text{GII} = 1 - \frac{\text{HARM(GF, GM)}}{\text{GF,M}}$$
 
 Where:
-- \(HARM(GF, GM)\) is the harmonic mean of the geometric means of the three dimensions for both genders.
-- \(GF,M\) is the geometric mean of the arithmetic means for each indicator, treating both genders equally.
+- $\(HARM(GF, GM)\)$ is the harmonic mean of the geometric means of the three dimensions for both genders.
+- $\(GF,M\)$ is the geometric mean of the arithmetic means for each indicator, treating both genders equally.
 
 ## Gender Development Index: 
 
@@ -58,14 +58,14 @@ $$GDI = \frac{\text{HDIf}}{\text{HDIm}}$$
 
 Where,
 
-- \(HDIf = \left(I_{\text{Health}f} \cdot I_{\text{Education}f} \cdot I_{\text{Income}f}\right)^{1/3}\)
-- \(HDIm = \left(I_{\text{Health}m} \cdot I_{\text{Education}m} \cdot I_{\text{Income}m}\right)^{1/3}\)
+- $\(HDIf = \left(I_{\text{Health}f} \cdot I_{\text{Education}f} \cdot I_{\text{Income}f}\right)^{1/3}\)$
+- $\(HDIm = \left(I_{\text{Health}m} \cdot I_{\text{Education}m} \cdot I_{\text{Income}m}\right)^{1/3}\)$
 
 Where,
 
-- \(I_{\text{Health}f}\) and \(I_{\text{Health}m}\) are the health indices for females and males, respectively.
-- \(I_{\text{Education}f}\) and \(I_{\text{Education}m}\) are the education indices for females and males, respectively.
-- \(I_{\text{Income}f}\) and \(I_{\text{Income}m}\) are the income indices for females and males, respectively.
+- $\(I_{\text{Health}f}\)$ and $\(I_{\text{Health}m}\)$ are the health indices for females and males, respectively.
+- $\(I_{\text{Education}f}\)$ and $\(I_{\text{Education}m}\)$ are the education indices for females and males, respectively.
+- $\(I_{\text{Income}f}\)$ and $\(I_{\text{Income}m}\)$ are the income indices for females and males, respectively.
 
 ## Gender Empowerment Measure: 
 
@@ -75,9 +75,9 @@ The formula for GEM is:
 $$\text{GEM} = \frac{A + B + C}{3}$$
 
 Where:
-- \(A\) represents the percentage of seats held by women in national parliaments.
-- \(B\) represents the percentage of women in economic decision-making positions, such as legislators, senior officials, managers, professionals, and technicians.
-- \(C\) represents the female share of income, calculated as the ratio of female to male estimated earned income.
+- $(A\)$ represents the percentage of seats held by women in national parliaments.
+- $(B\)$ represents the percentage of women in economic decision-making positions, such as legislators, senior officials, managers, professionals, and technicians.
+- $(C\)$ represents the female share of income, calculated as the ratio of female to male estimated earned income.
 
 
 # Statement of Need
