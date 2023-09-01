@@ -44,9 +44,7 @@ $$
 The Gender Inequality Index (GII) is a composite measure that captures gender-based inequalities across three key dimensions: reproductive health, empowerment, and labor market participation. It ranges from 0 to 1, where 0 signifies that both genders fare equally, and 1 indicates maximum inequality between the genders. The GII is calculated by taking the harmonic mean of the geometric means of the three dimensions for both genders, and then dividing it by a reference standard that treats both genders equally. The result is then subtracted from 1.
 
 The simplified formula for GII is:
-$$\[
-\text{GII} = 1 - \frac{HARM(GF, GM)}{GF,M}
-\]$$
+$$\text{GII} = 1 - \frac{HARM(GF, GM)}{GF,M}$$
 
 Where:
 - $\(HARM(GF, GM)\)$ is the harmonic mean of the geometric means of the three dimensions for both genders.
@@ -77,9 +75,7 @@ he Gender Empowerment Measure (GEM) is an integral metric designed to evaluate g
 The formula for GEM is:
 The formula for GEM is:
 
-$$\[
-\text{GEM} = \frac{A + B + C}{3}
-\]$$
+$$\text{GEM} = \frac{A + B + C}{3}$$
 
 Where:
 - $\(A\)$ represents the percentage of seats held by women in national parliaments.
