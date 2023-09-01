@@ -105,6 +105,7 @@ gender_development_index(real_data_GDI)
 ```
 
 Output:
+
 | No. | Country               | GDI          | Female HDI  | Male HDI    |
 |-----|-----------------------|--------------|-------------|-------------|
 | 1   | Afghanistan           | 0.455578857  | 0.403890975 | 0.482653625 |
@@ -115,6 +116,7 @@ Output:
 | 6   | Antigua and Barbuda   |              |             |             |
 | 7   | Argentina             | 0.506390402  | 0.845486531 | 0.824147269 |
 
+
 Gender Pay Gap:
 
 ```R
@@ -122,6 +124,7 @@ gender_pay_gap(real_data_GPG)
 ```
 
 Output:
+
 | No. | Country               | Gender Pay Gap |
 |-----|-----------------------|----------------|
 | 1   | Afghanistan           | 82.74522499    |
