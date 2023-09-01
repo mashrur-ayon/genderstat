@@ -28,6 +28,10 @@ The 'genderstat' is a comprehensive package designed for the R programming langu
 
 This package is primarily constructed to assist researchers in the social sciences who are engaged in gender-related studies. As a freely accessible open-source package from R, it does not entail any costs. This provision allows researchers to concentrate more on their in-depth theoretical investigations rather than allocating excessive time to create functions for data visualization or resorting to costly proprietary alternatives. The 'genderstat' package is equipped with the essential capabilities to analyze and visualize gender metrics, serving as a dedicated resource for gender analysis.
 
+# Statement of Need
+
+For researchers examining gender issues, it is crucial to understand both the quantitative and qualitative aspects of any form of discrimination. Although 'genderstat' is not designed for qualitative analysis, it holds a distinctive position as the first and, to date, the only dedicated R package available on CRAN for analyzing and visualizing gender metrics. Inspired by the core principles of open-source software, this package empowers researchers to examine the underlying factors contributing to discrimination in society.
+
 
 # Core Theoretical Concepts
 
@@ -35,7 +39,7 @@ This package is primarily constructed to assist researchers in the social scienc
 The Gender Pay Gap is a measure that reflects the disparity between the average income of men and women. It is commonly expressed as a percentage and indicates the difference in the average earnings of men and women in the workforce. A higher percentage indicates a greater disparity between male and female earnings, whereas a 0% pay gap would signify complete gender equality in terms of pay. The gender pay gap is a crucial indicator of gender inequality and is influenced by various factors including, but not limited to, discrimination, differences in occupation and hours worked, and disparities in opportunities for career progression.
 The Gender Pay Gap is calculated using the following formula:
 
-$$\text{Gender Pay Gap} = \left(\frac{\text{Male income} - \text{Female income}}{\text{Male income}}\right) \times 100$$
+$${Gender Pay Gap} = \left(\frac{{Male income} - {Female income}}{{Male income}}\right) \times 100$$
 
 ## Gender Inequality Index:
 
@@ -43,12 +47,12 @@ The Gender Inequality Index (GII) is a composite measure that captures gender-ba
 
 The simplified formula for GII is:
 
-$$\text{GII} = 1 - \frac{\text{HARM(GF, GM)}}{\text{GF,M}}$$
+$${GII} = 1 - \frac{{HARM(GF, GM)}}{{GF,M}}$$
 
 Where:
 
-- $\text{HARM(GF, GM)}$ is the harmonic mean of the geometric means of the three dimensions for both genders.
-- $\text{GF,M}$ is the geometric mean of the arithmetic means for each indicator, treating both genders equally.
+- ${HARM(GF, GM)}$ is the harmonic mean of the geometric means of the three dimensions for both genders.
+- ${GF,M}$ is the geometric mean of the arithmetic means for each indicator, treating both genders equally.
 
 ## Gender Development Index: 
 
@@ -56,7 +60,7 @@ The Gender Development Index (GDI) is a metric that reflects gender inequalities
 
 The GDI is computed through a four-step process involving the estimation of female and male earned incomes, the normalization of indicators, the calculation of female and male Human Development Index (HDI) values, and finally, the comparison of female and male HDI values. The formula for GDI is:
 
-$$GDI = \frac{\text{HDIf}}{\text{HDIm}}$$
+$$GDI = \frac{{HDIf}}{{HDIm}}$$
 
 Where,
 
@@ -74,7 +78,7 @@ Where,
 The Gender Empowerment Measure (GEM) is an integral metric designed to evaluate gender inequality across essential areas of participation and decision-making. It is particularly focused on assessing women's empowerment in political representation, economic decision-making positions, and income distribution. The GEM is calculated using three equally weighted components, 'A', 'B', and 'C'.
 The formula for GEM is:
 
-$$\text{GEM} = \frac{A + B + C}{3}$$
+$${GEM} = \frac{A + B + C}{3}$$
 
 Where:
 - $A$ represents the percentage of seats held by women in national parliaments.
@@ -82,9 +86,6 @@ Where:
 - $C$ represents the female share of income, calculated as the ratio of female to male estimated earned income.
 
 
-# Statement of Need
-
-For researchers examining gender issues, it is crucial to understand both the quantitative and qualitative aspects of any form of discrimination. Although 'genderstat' is not designed for qualitative analysis, it holds a distinctive position as the first and, to date, the only dedicated R package available on CRAN for analyzing and visualizing gender metrics. Inspired by the core principles of open-source software, this package empowers researchers to examine the underlying factors contributing to discrimination in society.
 
 # Application
 Application and Basic Structure of the package is as follows:
@@ -104,6 +105,15 @@ gender_development_index(real_data_GDI)
 ```
 
 Output:
+| No. | Country               | GDI          | Female HDI  | Male HDI    |
+|-----|-----------------------|--------------|-------------|-------------|
+| 1   | Afghanistan           | 0.455578857  | 0.403890975 | 0.482653625 |
+| 2   | Albania               | 0.508329304  | 0.8462988   | 0.818564494 |
+| 3   | Algeria               | 0.481143309  | 0.70003075  | 0.754901153 |
+| 4   | Andorra               |              |             |             |
+| 5   | Angola                | 0.463289727  | 0.54259953  | 0.628588819 |
+| 6   | Antigua and Barbuda   |              |             |             |
+| 7   | Argentina             | 0.506390402  | 0.845486531 | 0.824147269 |
 
 Gender Pay Gap:
 
@@ -112,6 +122,15 @@ gender_pay_gap(real_data_GPG)
 ```
 
 Output:
+| No. | Country               | Gender Pay Gap |
+|-----|-----------------------|----------------|
+| 1   | Afghanistan           | 82.74522499    |
+| 2   | Albania               | 30.02405292    |
+| 3   | Algeria               | 80.04160342    |
+| 4   | Andorra               |                |
+| 5   | Angola                | 23.33387123    |
+| 6   | Antigua and Barbuda   |                |
+| 7   | Argentina             | 40.9273582     |
 
 
 ```R
