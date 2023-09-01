@@ -35,9 +35,7 @@ This package is primarily constructed to assist researchers in the social scienc
 The Gender Pay Gap is a measure that reflects the disparity between the average income of men and women. It is commonly expressed as a percentage and indicates the difference in the average earnings of men and women in the workforce. A higher percentage indicates a greater disparity between male and female earnings, whereas a 0% pay gap would signify complete gender equality in terms of pay. The gender pay gap is a crucial indicator of gender inequality and is influenced by various factors including, but not limited to, discrimination, differences in occupation and hours worked, and disparities in opportunities for career progression.
 The Gender Pay Gap is calculated using the following formula:
 
-$$
-\text{Gender Pay Gap} = \left(\frac{\text{Male income} - \text{Female income}}{\text{Male income}}\right) \times 100
-$$
+$$\text{Gender Pay Gap} = \left(\frac{\text{Male income} - \text{Female income}}{\text{Male income}}\right) \times 100$$
 
 ## Gender Inequality Index: 
 
@@ -47,8 +45,8 @@ The simplified formula for GII is:
 $$\text{GII} = 1 - \frac{HARM(GF, GM)}{GF,M}$$
 
 Where:
-- \(HARM(GF, GM)\) is the harmonic mean of the geometric means of the three dimensions for both genders.
-- \(GF,M\) is the geometric mean of the arithmetic means for each indicator, treating both genders equally.
+- $\(HARM(GF, GM)\)$ is the harmonic mean of the geometric means of the three dimensions for both genders.
+- $\(GF,M\)$ is the geometric mean of the arithmetic means for each indicator, treating both genders equally.
 
 ## Gender Development Index: 
 
@@ -65,17 +63,19 @@ Where,
 
 Where,
 
-- $\(I_{\text{Health}f}\) and \(I_{\text{Health}m}\)$ are the health indices for females and males, respectively.
-- $\(I_{\text{Education}f}\) and \(I_{\text{Education}m}\)$ are the education indices for females and males, respectively.
-- $\(I_{\text{Income}f}\) and \(I_{\text{Income}m}\)$ are the income indices for females and males, respectively.
+- $\(I_{\text{Health}f}\)$ and $\(I_{\text{Health}m}\)$ are the health indices for females and males, respectively.
+- $\(I_{\text{Education}f}\)$ and $\(I_{\text{Education}m}\)$ are the education indices for females and males, respectively.
+- $\(I_{\text{Income}f}\)$ and $\(I_{\text{Income}m}\)$ are the income indices for females and males, respectively.
 
 ## Gender Empowerment Measure: 
 
-he Gender Empowerment Measure (GEM) is an integral metric designed to evaluate gender inequality across essential areas of participation and decision-making. It is particularly focused on assessing women's empowerment in political representation, economic decision-making positions, and income distribution. The GEM is calculated using three equally weighted components, 'A', 'B', and 'C'.
+The Gender Empowerment Measure (GEM) is an integral metric designed to evaluate gender inequality across essential areas of participation and decision-making. It is particularly focused on assessing women's empowerment in political representation, economic decision-making positions, and income distribution. The GEM is calculated using three equally weighted components, 'A', 'B', and 'C'.
 The formula for GEM is:
 The formula for GEM is:
 
-$$\text{GEM} = \frac{A + B + C}{3}$$
+$$
+\text{GEM} = \frac{A + B + C}{3}
+$$
 
 Where:
 - $\(A\)$ represents the percentage of seats held by women in national parliaments.
