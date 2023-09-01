@@ -47,8 +47,8 @@ The simplified formula for GII is:
 $$\text{GII} = 1 - \frac{HARM(GF, GM)}{GF,M}$$
 
 Where:
-- $\(HARM(GF, GM)\)$ is the harmonic mean of the geometric means of the three dimensions for both genders.
-- $\(GF,M\)$ is the geometric mean of the arithmetic means for each indicator, treating both genders equally.
+- \(HARM(GF, GM)\) is the harmonic mean of the geometric means of the three dimensions for both genders.
+- \(GF,M\) is the geometric mean of the arithmetic means for each indicator, treating both genders equally.
 
 ## Gender Development Index: 
 
