@@ -58,8 +58,8 @@ $$\[GDI = \frac{HDIf}{HDIm}\]$$
 
 Where,
 
-- $\(HDIf\) = \(\left(I_{\text{Health}f} \cdot I_{\text{Education}f} \cdot I_{\text{Income}f}\right)^{1/3}\)$
-- $\(HDIm\) = \(\left(I_{\text{Health}m} \cdot I_{\text{Education}m} \cdot I_{\text{Income}m}\right)^{1/3}\)$
+- $\(HDIf\)$ = $\(\left(I_{\text{Health}f} \cdot I_{\text{Education}f} \cdot I_{\text{Income}f}\right)^{1/3}\)$
+- $\(HDIm\)$ = $\(\left(I_{\text{Health}m} \cdot I_{\text{Education}m} \cdot I_{\text{Income}m}\right)^{1/3}\)$
 
 Where,
 
