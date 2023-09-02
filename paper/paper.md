@@ -90,7 +90,8 @@ Where:
 
 # Application
 In the forthcoming section, rudimentary instances elucidating the application of the `genderstat` package will be tendered. Prior to that, the fundamental architecture of the package is delineated in the subsequent illustration.
-![Basic Structure of genderstat package](https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/basic-structure.png){ width=70% }
+
+![Basic Structure of genderstat package](https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/basic-structure.png)
 
 
 ## Examples
@@ -195,7 +196,7 @@ library(readr)
 plot_gdi(real_data_GDI)
 ```
 
-Output: 
+_Plot output shown as image:_ 
 
 ![Gender Development Index Plot](https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/plot_gdi_output.png){ width=70% }
 
@@ -220,7 +221,7 @@ library(readr)
 # Plotting Human Development Index from example dataset
 plot_hdi(real_data_GDI)
 ```
-Output:
+_Plot output shown as image:_
 
 ![Human Development Index Plot](https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/plot_hdi_output.png){ width=70% }
 
@@ -246,7 +247,7 @@ plot_gii_health(real_data_GII)
 
 ```
 
-Output:
+_Plot output shown as image:_
 
 ![Health Component of Gender Inequality Index](https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/plot_gii_health_output.png){ width=70% }
 
