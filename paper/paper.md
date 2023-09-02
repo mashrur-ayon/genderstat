@@ -91,7 +91,7 @@ Where:
 # Application
 In the forthcoming section, rudimentary instances elucidating the application of the `genderstat` package will be tendered. Prior to that, the fundamental architecture of the package is delineated in the subsequent illustration.
 
-![Basic Structure of genderstat package](https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/basic-structure.png)
+![Basic Structure of genderstat package](https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/basic-structure.png){ width=85% }
 
 
 ## Examples
