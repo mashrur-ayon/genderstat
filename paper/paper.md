@@ -77,13 +77,13 @@ The Gender Empowerment Measure (GEM) is a pivotal metric meticulously crafted to
 
 The GEM is quantified using the subsequent formula:
 
-$$\text{GEM} = \frac{\text{Female Parliament Seats} + \text{Female Professional Positions} + \text{Female to Male Earned Income Ratio}}{3}$$
+$$\text{GEM} = \frac{\text{FPS} + \text{FPP} + \text{IR}}{3}$$
 
 Where:
 
-- $\text{Female Parliament Seats}$ is the proportion of parliamentary seats occupied by females.
-- $\text{Female Professional Positions}$ is the proportion of professional and technical job roles occupied by females.
-- $\text{Female to Male Earned Income Ratio}$ is the income ratio for females in comparison to males.
+- $\text{FPS}$ is the proportion of parliamentary seats occupied by females.
+- $\text{FPP}$ is the proportion of professional and technical job roles occupied by females.
+- $\text{IR}$ is the income ratio for females in comparison to males.
 
 
 
@@ -91,7 +91,7 @@ Where:
 # Application
 In the forthcoming section, rudimentary instances elucidating the application of the `genderstat` package will be tendered. Prior to that, the fundamental architecture of the package is delineated in the subsequent illustration.
 
-![Basic Structure of genderstat package](https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/basic-structure.png){ width=85% }
+![Basic Structure of genderstat package](https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/basic-structure.png){ width=80% }
 
 
 ## Examples
