@@ -90,7 +90,8 @@ Where:
 # Application
 Application and Basic Structure of the package is as follows:
 
-![Basic Structure](https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/basic-structure.png)
+<img src="https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/basic-structure.png" width="604" height="431" alt="Basic Structure"><br><figcaption>Basic Structure</figcaption>
+
 
 ## Key Visualizations and Analyses
 With `genderstat`, you can perform a range of visualizations and analyses:
