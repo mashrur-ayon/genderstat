@@ -20,92 +20,112 @@ affiliations:
   index: 1
 ---
 
-
-# Draft 1
 # Summary
 
-The 'genderstat' is a comprehensive package designed for the R programming language, aimed at facilitating quantitative analysis in gender studies. It encompasses a range of functions that enable the calculation of several key gender inequality metrics, including the Gender Pay Gap, Gender Inequality Index (GII), Gender Development Index (GDI), and Gender Empowerment Measure (GEM). Additionally, it incorporates real datasets, sourced from the UNDP Human Development Reports Data Center and the World Bank Gender Data Portal, which can be utilized for practice and educational purposes.
+The `genderstat` package is an exhaustive tool developed for the `R` [@R] programming environment, explicitly devised to expedite quantitative evaluations in the field of gender studies. It encompasses an array of functions that facilitate the computation of pivotal gender disparity indicators, including the _Gender Pay Gap_ **(GPG)**, _Gender Inequality Index_ **(GII)**, _Gender Development Index_ **(GDI)**, and _Gender Empowerment Measure_ **(GEM)**. Moreover, it incorporates authentic datasets[@DVN/GZLYLI_2023], derived from the UNDP Human Development Reports Data Center and the World Bank Gender Data Portal, which can be leveraged for pedagogical and practical applications.
 
-This package is primarily constructed to assist researchers in the social sciences who are engaged in gender-related studies. As a freely accessible open-source package from R, it does not entail any costs. This provision allows researchers to concentrate more on their in-depth theoretical investigations rather than allocating excessive time to create functions for data visualization or resorting to costly proprietary alternatives. The 'genderstat' package is equipped with the essential capabilities to analyze and visualize gender metrics, serving as a dedicated resource for gender analysis.
+This package is fundamentally engineered to support scholars in the social sciences engaged in gender-centric research. Being a freely accessible open-source resource from `R` [@R], it does not incur any financial burdens. Moreover, by being open-source, it supports the ethos of collaborative knowledge sharing and innovation that underpin open-source initiatives and their core philosophy. This provision enables researchers to focus more intently on their profound theoretical explorations rather than dedicating an exorbitant amount of time to craft functions for data visualization or resorting to expensive proprietary alternatives. The `genderstat` package is endowed with the requisite functionalities to scrutinize and visualize gender metrics, thereby serving as a specialized asset for gender analysis.
+
+Additionally, the genderstat package relies on other `R` [@R] packages, namely `ggplot2` [@wickham_2016], `dplyr` [@wickham_2020_dplyr], and `reshape2` [@wickham_2007_reshaping], to provide its full range of functionalities. These dependencies are crucial for the data manipulation, transformation, and visualization tasks that `genderstat` performs.
 
 # Statement of Need
 
-For researchers examining gender issues, it is crucial to understand both the quantitative and qualitative aspects of any form of discrimination. Although 'genderstat' is not designed for qualitative analysis, it holds a distinctive position as the first and, to date, the only dedicated R package available on CRAN for analyzing and visualizing gender metrics. Inspired by the core principles of open-source software, this package empowers researchers to examine the underlying factors contributing to discrimination in society.
+For researchers probing into the intricacies of gender-related issues, it is imperative to meticulously dissect both the quantitative and qualitative dimensions of any manifestation of discrimination. While `genderstat` is not tailored for qualitative inquiries, it occupies a unique niche as the inaugural, and hitherto, _the pioneer and sole dedicated R package_ accessible on **CRAN** for the analysis and visual representation of gender metrics. Born from the spirit of the foundational tenets of open-source software, this package bestows upon researchers the capability to scrutinize the contributory elements underpinning discrimination in the societal fabric. This facility not only liberates researchers from the constraints of paid proprietary software, thereby democratizing the process of gender analysis but also enables a shift in focus towards more substantive aspects of their research, minimizing the time and effort expended on the analytical component. Ultimately, `genderstat` serves as a pivotal tool in the researcher's arsenal, aiding in the elucidation and subsequent eradication of gender-based disparities.
 
 
 # Core Theoretical Concepts
 
-## Gender Pay Gap: 
-The Gender Pay Gap is a measure that reflects the disparity between the average income of men and women. It is commonly expressed as a percentage and indicates the difference in the average earnings of men and women in the workforce. A higher percentage indicates a greater disparity between male and female earnings, whereas a 0% pay gap would signify complete gender equality in terms of pay. The gender pay gap is a crucial indicator of gender inequality and is influenced by various factors including, but not limited to, discrimination, differences in occupation and hours worked, and disparities in opportunities for career progression.
-The Gender Pay Gap is calculated using the following formula:
+### Gender Pay Gap: 
 
-$${Gender Pay Gap} = \left(\frac{{Male income} - {Female income}}{{Male income}}\right) \times 100$$
+The Gender Pay Gap [@miller_2018_the] is a significant metric that encapsulates the differential in the mean earnings of men and women, typically expressed as a percentage. It serves as a lens through which the variance in the remunerations of men and women in the workforce is discerned. A larger percentage denotes a more pronounced incongruity in the earnings of the two genders, while a 0% pay gap symbolizes absolute parity in compensation. As a pivotal barometer of gender inequality, the gender pay gap is shaped by a multitude of determinants, encompassing not merely discrimination, but also disparities in the nature of occupations, the quantum of hours worked, and the opportunities for career advancement[@miller_2018_the].
 
-## Gender Inequality Index:
+The Gender Pay Gap is computed employing the subsequent formula:
 
-The Gender Inequality Index (GII) is a composite measure that captures gender-based inequalities across three key dimensions: reproductive health, empowerment, and labor market participation. It ranges from 0 to 1, where 0 signifies that both genders fare equally, and 1 indicates maximum inequality between the genders. The GII is calculated by taking the harmonic mean of the geometric means of the three dimensions for both genders, and then dividing it by a reference standard that treats both genders equally. The result is then subtracted from 1.
+$$\text{GPG} = \left( \frac{\text{Male Income} - \text{Female Income}}{\text{Male Income}} \right) \times 100 \%$$
 
-The simplified formula for GII is:
+### Gender Inequality Index:
 
-$${GII} = 1 - \frac{{HARM(GF, GM)}}{{GF,M}}$$
+The Gender Inequality Index (GII) is an intricate composite measure meticulously designed to encapsulate the disparities engendered by gender across three pivotal dimensions: reproductive health, empowerment, and participation in the labor market[@ferrant_2010_the]. Its value oscillates between 0 and 1; a score of 0 indicates perfect gender parity across the analyzed dimensions, while a score of 1 signifies the apogee of gender inequality. The computation of the GII entails taking the harmonic mean of the geometric means across the aforementioned dimensions for both genders, subsequently dividing this result by a reference standard premised on treating both genders equitably[@conceio_2022_human]. The resultant figure is then subtracted from 1.
+
+The streamlined formula for GII is delineated as follows:
+
+$$\text{GII} = 1 - \sqrt[3]{H \cdot E \cdot L}$$
+
+Where:
+
+- $\text{H}$ is the health component, calculated using the maternal mortality ratio and adolescent birth rate.
+- $\text{E}$ is the empowerment component, calculated using the proportion of parliamentary seats occupied by females and the proportion of females with secondary education.
+- $\text{L}$ is the labor market participation component, calculated using the female and male labor force participation rates.
+
+### Gender Development Index: 
+
+The Gender Development Index (GDI) is an indispensable metric engineered to elucidate gender disparities across three quintessential dimensions of human development: health, education, and mastery over economic resources. Health is evaluated by the life expectancy at birth for both genders; education is assessed by the anticipated years of schooling for children coupled with the average years of schooling for adults aged 25 and older, for both sexes; and economic dominion is appraised by the estimated earned income for females and males. This pivotal index plays a crucial role in pinpointing disparities between the sexes, thereby steering policymakers in devising strategies that foster gender equality and empower all individuals[@charmes_2003_measuring].
+
+The computation of the GDI entails a four-step procedure, encompassing the estimation of female and male earned incomes, normalization of indicators, computation of female and male Human Development Index (HDI) values, and ultimately, the juxtaposition of female and male HDI values[@conceio_2022_human]. The formula for GDI is delineated as follows:
+
+The HDI for each gender is calculated using the formula:
+
+$$\text{HDI} = \left( \text{health} \cdot \text{education} \cdot \text{standard of living} \right)^{1/3}$$
+
+Finally, the GDI in this package is calculated using the formula:
+
+$$\text{GDI} = \frac{\text{female HDI}}{\text{female HDI} + \text{male HDI}}$$
+
+### Gender Empowerment Measure: 
+
+The Gender Empowerment Measure (GEM) is a pivotal metric meticulously crafted to scrutinize gender inequality across cardinal domains of participation and decision-making. It is predominantly geared towards evaluating women's empowerment in political representation, economic decision-making echelons, and income distribution[@charmes_2003_measuring].This results in a value between 0 and 1, where a higher value indicates higher gender empowerment.
+
+The GEM is quantified using the subsequent formula:
+
+$$\text{GEM} = \frac{\text{Female Parliament Seats} + \text{Female Professional Positions} + \text{Female to Male Earned Income Ratio}}{3}$$
 
 Where:
 
-- ${HARM(GF, GM)}$ is the harmonic mean of the geometric means of the three dimensions for both genders.
-- ${GF,M}$ is the geometric mean of the arithmetic means for each indicator, treating both genders equally.
+- $\text{Female Parliament Seats}$ is the proportion of parliamentary seats occupied by females.
+- $\text{Female Professional Positions}$ is the proportion of professional and technical job roles occupied by females.
+- $\text{Female to Male Earned Income Ratio}$ is the income ratio for females in comparison to males.
 
-## Gender Development Index: 
-
-The Gender Development Index (GDI) is a metric that reflects gender inequalities across three fundamental dimensions of human development: health, education, and command over economic resources. Health is measured by both female and male life expectancy at birth; education is gauged by the expected years of schooling for children and the mean years of schooling for adults aged 25 and older, for both genders; and economic command is assessed by the estimated earned income for females and males. This index is crucial as it aids in identifying disparities between the sexes, thereby guiding policymakers in formulating strategies that promote gender equality and empower all individuals.
-
-The GDI is computed through a four-step process involving the estimation of female and male earned incomes, the normalization of indicators, the calculation of female and male Human Development Index (HDI) values, and finally, the comparison of female and male HDI values. The formula for GDI is:
-
-$$GDI = \frac{{HDIf}}{{HDIm}}$$
-
-Where,
-
-- $HDIf = \left(I_{\text{Health}f} \cdot I_{\text{Education}f} \cdot I_{\text{Income}f}\right)^{1/3}$
-- $HDIm = \left(I_{\text{Health}m} \cdot I_{\text{Education}m} \cdot I_{\text{Income}m}\right)^{1/3}$
-
-Where,
-
-- $I_{\text{Health}f}$ and $I_{\text{Health}m}$ are the health indices for females and males, respectively.
-- $I_{\text{Education}f}$ and $I_{\text{Education}m}$ are the education indices for females and males, respectively.
-- $I_{\text{Income}f}$ and $I_{\text{Income}m}$ are the income indices for females and males, respectively.
-
-## Gender Empowerment Measure: 
-
-The Gender Empowerment Measure (GEM) is an integral metric designed to evaluate gender inequality across essential areas of participation and decision-making. It is particularly focused on assessing women's empowerment in political representation, economic decision-making positions, and income distribution. The GEM is calculated using three equally weighted components, 'A', 'B', and 'C'.
-The formula for GEM is:
-
-$${GEM} = \frac{A + B + C}{3}$$
-
-Where:
-- $A$ represents the percentage of seats held by women in national parliaments.
-- $B$ represents the percentage of women in economic decision-making positions, such as legislators, senior officials, managers, professionals, and technicians.
-- $C$ represents the female share of income, calculated as the ratio of female to male estimated earned income.
 
 
 
 # Application
-Application and Basic Structure of the package is as follows:
+In the forthcoming section, rudimentary instances elucidating the application of the `genderstat` package will be tendered. Prior to that, the fundamental architecture of the package is delineated in the subsequent illustration.
+![Basic Structure of genderstat package](https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/basic-structure.png){ width=70% }
 
-<img src="https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/basic-structure.png" width="604" height="431" alt="Basic Structure"><br><figcaption>Basic Structure</figcaption>
 
+## Examples
+In the following, five exemplar applications of the `genderstat` package are delineated. These examples are meticulously curated to assist users in comprehending the utilization of this package, whilst simultaneously illuminating the simplicity and efficiency facilitated by minimalistic single-line coding.
 
-## Key Visualizations and Analyses
+In these instances, the sample datasets: _real_data_GPG_, _real_data_GII_, and _real_data_GDI_ are employed to maintain simplicity. However, users wishing to load data from CSV files are encouraged to utilize the `readr`[@wickham_2021_read] package, while those aiming to modify data are advised to employ the `dplyr` [@wickham_2020_dplyr] package as a comprehensive solution.
+
 With `genderstat`, you can perform a range of visualizations and analyses:
 
-Gender Development Index (GDI): Visualize the disparities in achievements between women and men in health, education, and decent standards of living.
+### Analytical Functions
+**Gender Development Index (GDI):**
 
 ```R
+# Install the packages if you haven't already
+install.packages("ggplot2")
+install.packages("dplyr")
+install.packages("genderstat")
+install.packages("readr")
+
+# Load the packages
+
+library(ggplot2)
+library(dplyr)
+library(genderstat)
+library(readr)
+
+
+
 # In this case, I am loading example data from the package
 # If you want to load your CSV then follow: data <- read_csv("/path/to/your/data.csv") 
 
 gender_development_index(real_data_GDI)
 ```
 
-Output:
+_Output shown as table:_
 
 | No. | Country               | GDI          | Female HDI  | Male HDI    |
 |-----|-----------------------|--------------|-------------|-------------|
@@ -118,13 +138,28 @@ Output:
 | 7   | Argentina             | 0.506390402  | 0.845486531 | 0.824147269 |
 
 
-Gender Pay Gap:
+**Gender Pay Gap:**
 
 ```R
+# Install the packages if you haven't already
+install.packages("ggplot2")
+install.packages("dplyr")
+install.packages("genderstat")
+install.packages("readr")
+
+# Load the packages
+
+library(ggplot2)
+library(dplyr)
+library(genderstat)
+library(reader)
+
+# Finding Gender Pay Gap from the example dataset
+
 gender_pay_gap(real_data_GPG)
 ```
 
-Output:
+_Output shown as table:_
 
 | No. | Country               | Gender Pay Gap |
 |-----|-----------------------|----------------|
@@ -137,32 +172,83 @@ Output:
 | 7   | Argentina             | 40.9273582     |
 
 
+
+### Data Visualization and Plot packages
+
+**Plotting Gender Development Index**
+
 ```R
+# Install the packages if you haven't already
+install.packages("ggplot2")
+install.packages("dplyr")
+install.packages("genderstat")
+install.packages("readr")
+
+# Load the packages
+
+library(ggplot2)
+library(dplyr)
+library(genderstat)
+library(readr)
+
+# Visualizing the gender development index from the example data
 plot_gdi(real_data_GDI)
 ```
 
 Output: 
 
-![Basic Structure](https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/plot_gdi_output.png)
+![Gender Development Index Plot](https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/plot_gdi_output.png){ width=70% }
+
+**Plotting Hunam Development Index**
 
 Comparative Analysis of HDIs: Present a side-by-side comparison of the Male and Female HDIs.
 
 ```R
+# Install the packages if you haven't already
+install.packages("ggplot2")
+install.packages("dplyr")
+install.packages("genderstat")
+install.packages("readr")
+
+# Load the packages
+
+library(ggplot2)
+library(dplyr)
+library(genderstat)
+library(readr)
+
+# Plotting Human Development Index from example dataset
 plot_hdi(real_data_GDI)
 ```
 Output:
 
-![Basic Structure](https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/plot_hdi_output.png)
+![Human Development Index Plot](https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/plot_hdi_output.png){ width=70% }
+
+**Plotting Health Component of Gender Inequality Index**
 
 Maternal Mortality Ratio and Adolescent Birth Rate: Use stacked bar plots to visualize these critical health metrics.
 ```R
+# Install the packages if you haven't already
+install.packages("ggplot2")
+install.packages("dplyr")
+install.packages("genderstat")
+install.packages("readr")
+
+# Load the packages
+
+library(ggplot2)
+library(dplyr)
+library(genderstat)
+library(reader)
+
+#Plotting the health component from the example dataset
 plot_gii_health(real_data_GII)
 
 ```
 
 Output:
 
-![Basic Structure](https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/plot_gii_health_output.png)
+![Health Component of Gender Inequality Index](https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/plot_gii_health_output.png){ width=70% }
 
 
 
