@@ -1,4 +1,4 @@
-# genderstat: R Package for Analytical Exploration of Gender Metrics by Country [![CRAN status](https://www.r-pkg.org/badges/version/genderstat)](https://cran.r-project.org/web/packages/genderstat/index.html)
+# genderstat: R Package for Analytical Exploration of Gender Metrics by Country [![CRAN status](https://www.r-pkg.org/badges/version/genderstat)](https://cran.r-project.org/web/packages/genderstat/index.html) [![status](https://joss.theoj.org/papers/cade05e5f52b64e0e866ce27921bd041/status.svg)](https://joss.theoj.org/papers/cade05e5f52b64e0e866ce27921bd041)
 
 
 
