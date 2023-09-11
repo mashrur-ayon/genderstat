@@ -26,7 +26,7 @@ The `genderstat` package is an exhaustive tool developed for the `R` [@R] progra
 
 This package is fundamentally engineered to support scholars in the social sciences engaged in gender-centric research. Being a freely accessible open-source resource from `R` [@R], it does not incur any financial burdens. Moreover, by being open-source, it supports the ethos of collaborative knowledge sharing and innovation that underpin open-source initiatives and their core philosophy. This provision enables researchers to focus more intently on their profound theoretical explorations rather than dedicating an exorbitant amount of time to craft functions for data visualization or resorting to expensive proprietary alternatives. The `genderstat` package is endowed with the requisite functionalities to scrutinize and visualize gender metrics, thereby serving as a specialized asset for gender analysis.
 
-Additionally, the genderstat package relies on other `R` [@R] packages, namely `ggplot2` [@wickham_2016], `dplyr` [@wickham_2020_dplyr], and `reshape2` [@wickham_2007_reshaping], to provide its full range of functionalities. These dependencies are crucial for the data manipulation, transformation, and visualization tasks that `genderstat` performs.
+Additionally, the genderstat package relies on other `R` [@R] packages, namely `ggplot2` [@wickham_2016], `dplyr` [@wickham_2020_dplyr], and `tidyr` [@wickham_2007_reshaping], to provide its full range of functionalities. These dependencies are crucial for the data manipulation, transformation, and visualization tasks that `genderstat` performs.
 
 # Statement of Need
 
@@ -108,8 +108,14 @@ With `genderstat`, you can perform a range of visualizations and analyses:
 # Install the packages if you haven't already
 install.packages("ggplot2")
 install.packages("dplyr")
-install.packages("genderstat")
 install.packages("readr")
+install.packages("genderstat")
+
+# If you want to obtain the latest version of genderstat package from github, use this code instead
+install.packages("devtools")
+devtools::install_github("mashrur-ayon/genderstat")
+
+
 
 # Load the packages
 
