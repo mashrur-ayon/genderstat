@@ -40,7 +40,7 @@ To gain insights into the gender inequalities across nations, we can visualize t
 library(genderstat)
 library(ggplot2)
 library(dplyr)
-library(reshape2)
+library(tidyr)
 
 # Load the example dataset
 data(real_data_GDI)

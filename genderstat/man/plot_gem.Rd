@@ -18,7 +18,6 @@ such as female parliament seats, female professional positions, and
 female to male earned income ratio for 15 countries based on GEM.
 }
 \examples{
-
 data(real_data_GEM) # Load example dataset
 plot_gem(real_data_GEM)
 

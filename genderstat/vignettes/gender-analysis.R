@@ -12,7 +12,7 @@ print(gdi_results)
 library(genderstat)
 library(ggplot2)
 library(dplyr)
-library(reshape2)
+library(tidyr)
 
 # Load the example dataset
 data(real_data_GDI)
