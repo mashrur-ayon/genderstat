@@ -1,6 +1,6 @@
 library(ggplot2)
 library(dplyr)
-library(reshape2)
+library(tidyr)
 
 #' @noRd
 .data <- dplyr::.data
@@ -13,13 +13,10 @@ library(reshape2)
 #' @importFrom utils head
 #' @importFrom stats reorder
 #' @import dplyr
-#' @import reshape2
 #' @examples
 #' data(real_data_GDI) # Load example dataset
 #' plot_gdi(real_data_GDI)
 #' @export
-
-
 plot_gdi <- function(data) {
   gdi_data <- gender_development_index(data)
   top_gdi <- dplyr::arrange(gdi_data, desc(.data$GDI)) %>%
@@ -34,28 +31,26 @@ plot_gdi <- function(data) {
     theme_minimal()
 }
 
-
-
 #' Plot Human Development Index (HDI) for Bottom 15 Countries by Gender
 #'
 #' @param data A data frame containing the required metrics for GDI and HDI computation.
 #' @return A ggplot2 object visualizing the HDI for males and females in the bottom 15 countries.
 #' @importFrom ggplot2 ggplot aes geom_point coord_flip labs theme_minimal scale_color_manual
 #' @import dplyr
-#' @import reshape2
+#' @import tidyr
 #' @examples
 #' data(real_data_GDI) # Load example dataset
 #' plot_hdi(real_data_GDI)
 #' @export
-
-
 plot_hdi <- function(data) {
   gdi_data <- gender_development_index(data)
   top_data <- dplyr::arrange(gdi_data, desc(.data$GDI)) %>%
     dplyr::slice_head(n = 15)
 
-  melted_data <- reshape2::melt(top_data, id.vars = "country", measure.vars = c("female_hdi", "male_hdi"),
-                                variable.name = "gender", value.name = "hdi")
+  melted_data <- top_data %>%
+    tidyr::pivot_longer(cols = c(.data$female_hdi, .data$male_hdi),
+                        names_to = "gender",
+                        values_to = "hdi")
 
   ggplot2::ggplot(melted_data, aes(x = .data$country, y = .data$hdi, color = .data$gender)) +
     geom_point(position = ggplot2::position_dodge(width = 0.5), size = 3) +
@@ -66,4 +61,3 @@ plot_hdi <- function(data) {
     theme_minimal() +
     scale_color_manual(values = c("female_hdi" = "#D55E00", "male_hdi" = "#009E73"))
 }
-
