@@ -113,7 +113,7 @@ install.packages("genderstat")
 
 # If you want to obtain the latest version of genderstat package from github, use this code instead
 install.packages("devtools")
-devtools::install_github("mashrur-ayon/genderstat")
+devtools::install_github("mashrur-ayon/genderstat", subdir = "genderstat")
 
 
 
