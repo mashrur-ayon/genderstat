@@ -1,9 +1,9 @@
 # Load necessary libraries
 library(ggplot2)
-library(reshape2)
+library(tidyr)
 
-#' @noRd
-.data <- dplyr::.data
+# These are symbols that will be used in ggplot's aes()
+globalVariables(c("country", "Value", "Metric"))
 
 #' Plot Gender Empowerment Measure (GEM) for 15 Countries
 #'
@@ -16,16 +16,10 @@ library(reshape2)
 #' @return A ggplot object representing the bar chart of the GEM and other metrics.
 #'
 #' @examples
-#'
 #' data(real_data_GEM) # Load example dataset
 #' plot_gem(real_data_GEM)
 #'
 #' @export
-plot_gem <- function(data) {
-  ...
-}
-
-
 
 plot_gem <- function(data) {
 
@@ -41,16 +35,17 @@ plot_gem <- function(data) {
   # Sort data based on GEM and take 15 countries
   top_15_data <- data[order(-data$GEM), ][1:15, ]
 
-  # Melt the data for plotting
-  melted_data <- reshape2::melt(top_15_data, id.vars = "country",
-                                variable.name = "Metric",
-                                value.name = "Value")
+  # Convert the data for plotting using tidyr's pivot_longer
+  melted_data <- top_15_data %>%
+    tidyr::pivot_longer(cols = -"country",
+                        names_to = "Metric",
+                        values_to = "Value")
 
-  # Plot
+  # Plot using aes()
   p <- ggplot2::ggplot(melted_data,
-                       ggplot2::aes_string(x = "reorder(country, -Value)",
-                                           y = "Value",
-                                           fill = "Metric")) +
+                       ggplot2::aes(x = reorder(country, -Value),
+                                    y = Value,
+                                    fill = Metric)) +
     ggplot2::geom_bar(stat = "identity", position = "dodge") +
     ggplot2::labs(title = "15 Countries by Gender Empowerment Measure (GEM)",
                   x = "Country", y = "Value") +
@@ -59,4 +54,3 @@ plot_gem <- function(data) {
 
   print(p)
 }
-
