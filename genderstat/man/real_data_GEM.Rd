@@ -14,15 +14,11 @@ A data frame with 191 rows and 4 columns:
 }
 }
 \source{
-Data obtained from the following sources:
-\itemize{
-  \item{\href{https://hdr.undp.org/data-center/documentation-and-downloads}{UNDP Human Development Reports Data Center}}
-  \item{\href{https://genderdata.worldbank.org/indicators/}{World Bank Gender Data Portal}}
-}
+Data obtained from \href{https://www.kaggle.com/dsv/6359326}{Kaggle}.
 }
 \usage{
 data(real_data_GEM)
 }
 \description{
-A dataset containing observed values for the GEM analysis.
+A dataset containing observed values for the GEM analysis. This data includes metrics for evaluating gender disparities in political representation, professional positions, and income across different countries.
 }

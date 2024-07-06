@@ -7,16 +7,15 @@
 gender_pay_gap(data)
 }
 \arguments{
-\item{data}{A data frame containing the required metrics for GPG computation.}
+\item{data}{A data frame containing the required metrics for GPG computation. The data frame must include the columns: \code{female_income} and \code{male_income}.}
 }
 \value{
-A numeric vector representing the GPG values.
+A data frame with two columns: \code{country} and \code{gpg}, representing the GPG values for each country.
 }
 \description{
-Computes the Gender Pay Gap (GPG) based on the provided dataset.
+Computes the Gender Pay Gap (GPG) based on the provided dataset. The GPG is calculated as the percentage difference between male and female incomes, providing insight into income disparities between genders.
 }
 \examples{
-
 data(real_data_GPG) # Load example dataset
 gpg_results <- gender_pay_gap(real_data_GPG)
 print(gpg_results)

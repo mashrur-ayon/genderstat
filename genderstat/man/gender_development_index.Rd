@@ -7,19 +7,17 @@
 gender_development_index(data)
 }
 \arguments{
-\item{data}{A data frame containing the required metrics for GDI computation.}
+\item{data}{A data frame containing the required metrics for GDI computation. The data frame must include the following columns: \code{female_life_expectancy}, \code{male_life_expectancy}, \code{female_mean_schooling}, \code{male_mean_schooling}, \code{female_gni_per_capita}, and \code{male_gni_per_capita}.}
 }
 \value{
-A numeric vector representing the GDI values.
+A data frame containing the GDI values for each country, along with the individual HDI values for females and males.
 }
 \description{
-Computes the Gender Development Index (GDI) based on the given dataset.
+Computes the Gender Development Index (GDI) based on the given dataset. The GDI measures gender disparities in three dimensions of human development: health, education, and standard of living.
 }
 \examples{
-
 data(real_data_GDI) # Load example dataset
 gdi_results <- gender_development_index(real_data_GDI)
 print(gdi_results)
-
 
 }

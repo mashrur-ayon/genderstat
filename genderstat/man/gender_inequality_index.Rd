@@ -7,16 +7,16 @@
 gender_inequality_index(data)
 }
 \arguments{
-\item{data}{A data frame containing the required metrics for GII computation.}
+\item{data}{A data frame containing the required metrics for GII computation.
+The data frame must include the following columns: \code{maternal_mortality_ratio}, \code{adolescent_birth_rate}, \code{female_parliament_seats}, \code{female_secondary_education}, \code{male_secondary_education}, \code{female_labor_force}, and \code{male_labor_force}.}
 }
 \value{
-A numeric vector representing the GII values.
+A data frame with two columns: \code{country} and \code{GII}, representing the GII values for each country.
 }
 \description{
-Computes the Gender Inequality Index (GII) based on the provided dataset.
+Computes the Gender Inequality Index (GII) based on the provided dataset. The GII measures gender disparities in reproductive health, empowerment, and labor market participation.
 }
 \examples{
-
 data(real_data_GII) # Load example dataset
 gii_results <- gender_inequality_index(real_data_GII)
 print(gii_results)

@@ -3,29 +3,25 @@
 \docType{data}
 \name{real_data_GDI}
 \alias{real_data_GDI}
-\title{Original Data of GDI (GDI)}
+\title{Original Data of GDI (Gender Development Index)}
 \format{
 A data frame with 191 rows and 7 columns:
 \describe{
   \item{country}{A character vector representing the name of the country.}
-  \item{female_life_expectancy}{A numeric vector representing the life expectancy of females in the respective country. Measured in years.}
-  \item{male_life_expectancy}{A numeric vector representing the life expectancy of males in the respective country. Measured in years.}
+  \item{female_life_expectancy}{A numeric vector representing the life expectancy of females in the respective country, measured in years.}
+  \item{male_life_expectancy}{A numeric vector representing the life expectancy of males in the respective country, measured in years.}
   \item{female_mean_schooling}{A numeric vector representing the average number of schooling years for females in the respective country.}
   \item{male_mean_schooling}{A numeric vector representing the average number of schooling years for males in the respective country.}
-  \item{female_gni_per_capita}{A numeric vector representing the Gross National Income per capita for females in the respective country. Measured in international dollars.}
-  \item{male_gni_per_capita}{A numeric vector representing the Gross National Income per capita for males in the respective country. Measured in international dollars.}
+  \item{female_gni_per_capita}{A numeric vector representing the Gross National Income per capita for females in the respective country, measured in international dollars.}
+  \item{male_gni_per_capita}{A numeric vector representing the Gross National Income per capita for males in the respective country, measured in international dollars.}
 }
 }
 \source{
-Data obtained from the following sources:
-\itemize{
-  \item{\href{https://hdr.undp.org/data-center/documentation-and-downloads}{UNDP Human Development Reports Data Center}}
-  \item{\href{https://genderdata.worldbank.org/indicators/}{World Bank Gender Data Portal}}
-}
+Data obtained from \href{https://www.kaggle.com/dsv/6359326}{Kaggle}.
 }
 \usage{
 data(real_data_GDI)
 }
 \description{
-A dataset containing observed values for the GDI analysis.
+A dataset containing observed values for the GDI analysis. This data includes metrics for evaluating gender disparities in health, education, and economic resources across different countries.
 }

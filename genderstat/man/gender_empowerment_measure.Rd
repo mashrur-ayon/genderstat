@@ -7,16 +7,17 @@
 gender_empowerment_measure(data)
 }
 \arguments{
-\item{data}{A data frame containing the required metrics for GEM computation.}
+\item{data}{A data frame containing the required metrics for GEM computation.
+The data frame must include the following columns: \code{female_parliament_seats}, \code{female_professional_positions}, and \code{female_to_male_earned_income_ratio}.}
 }
 \value{
-A numeric vector representing the GEM values.
+A data frame with two columns: \code{country} and \code{GEM}, representing the GEM values for each country.
 }
 \description{
 Computes the Gender Empowerment Measure (GEM) based on the provided dataset.
+The GEM measures gender inequality in political representation, professional positions, and income.
 }
 \examples{
-
 data(real_data_GEM) # Load example dataset
 gem_results <- gender_empowerment_measure(real_data_GEM)
 print(gem_results)

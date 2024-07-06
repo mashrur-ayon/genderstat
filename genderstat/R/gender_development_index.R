@@ -1,49 +1,17 @@
 #' Gender Development Index (GDI)
 #'
-#' Computes the Gender Development Index (GDI) based on the given dataset.
+#' Computes the Gender Development Index (GDI) based on the given dataset. The GDI measures gender disparities in three dimensions of human development: health, education, and standard of living.
 #'
-#' @param data A data frame containing the required metrics for GDI computation.
+#' @param data A data frame containing the required metrics for GDI computation. The data frame must include the following columns: \code{female_life_expectancy}, \code{male_life_expectancy}, \code{female_mean_schooling}, \code{male_mean_schooling}, \code{female_gni_per_capita}, and \code{male_gni_per_capita}.
 #'
-#' @return A numeric vector representing the GDI values.
-#'
+#' @return A data frame containing the GDI values for each country, along with the individual HDI values for females and males.
 #'
 #' @examples
-#'
 #' data(real_data_GDI) # Load example dataset
 #' gdi_results <- gender_development_index(real_data_GDI)
 #' print(gdi_results)
 #'
-#'
 #' @export
-gender_development_index <- function(data) {
-  ...
-}
-
-#' Original Data of GDI (GDI)
-#'
-#' A dataset containing observed values for the GDI analysis.
-#'
-#' @format A data frame with 191 rows and 7 columns:
-#' \describe{
-#'   \item{country}{A character vector representing the name of the country.}
-#'   \item{female_life_expectancy}{A numeric vector representing the life expectancy of females in the respective country. Measured in years.}
-#'   \item{male_life_expectancy}{A numeric vector representing the life expectancy of males in the respective country. Measured in years.}
-#'   \item{female_mean_schooling}{A numeric vector representing the average number of schooling years for females in the respective country.}
-#'   \item{male_mean_schooling}{A numeric vector representing the average number of schooling years for males in the respective country.}
-#'   \item{female_gni_per_capita}{A numeric vector representing the Gross National Income per capita for females in the respective country. Measured in international dollars.}
-#'   \item{male_gni_per_capita}{A numeric vector representing the Gross National Income per capita for males in the respective country. Measured in international dollars.}
-#' }
-#' @source Data obtained from the following sources:
-#' \itemize{
-#'   \item{\href{https://hdr.undp.org/data-center/documentation-and-downloads}{UNDP Human Development Reports Data Center}}
-#'   \item{\href{https://genderdata.worldbank.org/indicators/}{World Bank Gender Data Portal}}
-#' }
-#' @name real_data_GDI
-#' @docType data
-#' @usage data(real_data_GDI)
-NULL
-###########################################################
-
 gender_development_index <- function(data) {
   # Check input data for required columns
   required_columns <- c("female_life_expectancy", "male_life_expectancy",
@@ -80,3 +48,23 @@ gender_development_index <- function(data) {
 
   return(result_data)
 }
+
+#' Original Data of GDI (Gender Development Index)
+#'
+#' A dataset containing observed values for the GDI analysis. This data includes metrics for evaluating gender disparities in health, education, and economic resources across different countries.
+#'
+#' @format A data frame with 191 rows and 7 columns:
+#' \describe{
+#'   \item{country}{A character vector representing the name of the country.}
+#'   \item{female_life_expectancy}{A numeric vector representing the life expectancy of females in the respective country, measured in years.}
+#'   \item{male_life_expectancy}{A numeric vector representing the life expectancy of males in the respective country, measured in years.}
+#'   \item{female_mean_schooling}{A numeric vector representing the average number of schooling years for females in the respective country.}
+#'   \item{male_mean_schooling}{A numeric vector representing the average number of schooling years for males in the respective country.}
+#'   \item{female_gni_per_capita}{A numeric vector representing the Gross National Income per capita for females in the respective country, measured in international dollars.}
+#'   \item{male_gni_per_capita}{A numeric vector representing the Gross National Income per capita for males in the respective country, measured in international dollars.}
+#' }
+#' @source Data obtained from \href{https://www.kaggle.com/dsv/6359326}{Kaggle}.
+#' @name real_data_GDI
+#' @docType data
+#' @usage data(real_data_GDI)
+NULL

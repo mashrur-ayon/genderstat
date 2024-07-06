@@ -8,25 +8,21 @@
 A data frame with 191 rows and 8 columns:
 \describe{
   \item{country}{A character vector representing the name of the country.}
-  \item{maternal_mortality_ratio}{Maternal Mortality Ratio.}
-  \item{adolescent_birth_rate}{Adoloscent Birth rate.}
-  \item{female_parliament_seats}{Female Parliament Seats.}
-  \item{female_secondary_education}{Female Secondary Education.}
-  \item{male_secondary_education}{Male Secondary Education.}
-  \item{female_labor_force}{Participation of female in labour force.}
-  \item{male_labor_force}{Participation of male in labour force.}
+  \item{maternal_mortality_ratio}{A numeric vector representing the maternal mortality ratio.}
+  \item{adolescent_birth_rate}{A numeric vector representing the adolescent birth rate.}
+  \item{female_parliament_seats}{A numeric vector representing the proportion of parliamentary seats occupied by females in the respective country. Measured as a proportion (0-1).}
+  \item{female_secondary_education}{A numeric vector representing the proportion of females with secondary education in the respective country. Measured as a proportion (0-1).}
+  \item{male_secondary_education}{A numeric vector representing the proportion of males with secondary education in the respective country. Measured as a proportion (0-1).}
+  \item{female_labor_force}{A numeric vector representing the proportion of females in the labor force in the respective country. Measured as a proportion (0-1).}
+  \item{male_labor_force}{A numeric vector representing the proportion of males in the labor force in the respective country. Measured as a proportion (0-1).}
 }
 }
 \source{
-Data obtained from the following sources:
-\itemize{
-  \item{\href{https://hdr.undp.org/data-center/documentation-and-downloads}{UNDP Human Development Reports Data Center}}
-  \item{\href{https://genderdata.worldbank.org/indicators/}{World Bank Gender Data Portal}}
-}
+Data obtained from \href{https://www.kaggle.com/dsv/6359326}{Kaggle}.
 }
 \usage{
 data(real_data_GII)
 }
 \description{
-A dataset containing observed values for the GII analysis.
+A dataset containing observed values for the GII analysis. This data includes metrics for evaluating gender disparities in reproductive health, empowerment, and labor market participation across different countries.
 }

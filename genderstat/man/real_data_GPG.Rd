@@ -7,21 +7,17 @@
 \format{
 A data frame with 191 rows and 3 columns:
 \describe{
-  \item{country}{Name of Country}
-  \item{female_income}{Per capita female National Income}
-  \item{male_income}{Per capita male National Income}
+  \item{country}{A character vector representing the name of the country.}
+  \item{female_income}{A numeric vector representing the per capita female National Income in the respective country.}
+  \item{male_income}{A numeric vector representing the per capita male National Income in the respective country.}
 }
 }
 \source{
-Data obtained from the following sources:
-\itemize{
-  \item{\href{https://hdr.undp.org/data-center/documentation-and-downloads}{UNDP Human Development Reports Data Center}}
-  \item{\href{https://genderdata.worldbank.org/indicators/}{World Bank Gender Data Portal}}
-}
+Data obtained from \href{https://www.kaggle.com/dsv/6359326}{Kaggle}.
 }
 \usage{
 data(real_data_GPG)
 }
 \description{
-A dataset containing observed values for the GPG analysis.
+A dataset containing observed values for the GPG analysis. This data includes metrics for evaluating income disparities between genders across different countries.
 }
