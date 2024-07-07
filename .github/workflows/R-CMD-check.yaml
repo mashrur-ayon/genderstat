@@ -13,10 +13,10 @@ jobs:
 
       - name: Install dependencies
         run: |
+          cd genderstat/genderstat
           Rscript -e 'install.packages("remotes")'
           Rscript -e 'remotes::install_deps(dependencies = TRUE)'
           Rscript -e 'remotes::install_cran("testthat")'
-        working-directory: genderstat/genderstat
 
       - name: Check package
         run: |
