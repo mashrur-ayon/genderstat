@@ -1,26 +1,26 @@
 {
-    "id": "E94259C7",
-    "path": "~/GitHub/genderstat/paper/reference.bib",
+    "id": "FF13CC64",
+    "path": "~/GitHub/genderstat/paper/paper.md",
     "project_path": null,
-    "type": "text",
-    "hash": "1711645693",
+    "type": "markdown",
+    "hash": "3971010738",
     "contents": "",
     "dirty": false,
-    "created": 1720368729206.0,
+    "created": 1720369052682.0,
     "source_on_save": false,
     "relative_order": 1,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "42,1",
-        "scrollLine": "39"
+        "cursorPosition": "107,3",
+        "scrollLine": "104"
     },
     "folds": "",
-    "lastKnownWriteTime": 1720368774,
+    "lastKnownWriteTime": 1720369064,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1720368774589,
+    "last_content_update": 1720369064354,
     "read_only": false,
     "read_only_alternatives": []
 }
