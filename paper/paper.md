@@ -120,6 +120,22 @@ The selection of these specific metrics— **GPG**, **GII**, **GDI**, and **GEM*
 
 The `genderstat` package provides a powerful toolkit for researchers in gender studies, offering streamlined functions to compute and visualize various gender disparity indicators. This section presents two case studies that demonstrate the practical application of the package's functions for analyzing gender disparities.
 
+### Installation
+
+To install the `genderstat` package, you have two options: installing from CRAN or directly from GitHub.
+
+To install the stable release from CRAN, use the following command in your R console:
+```r
+install.packages("genderstat")
+```
+For the latest development version, you can install the package directly from GitHub using the devtools package. First, ensure that devtools is installed. Then, use the following command to install genderstat from GitHub:
+
+```r
+install.packages("devtools")
+devtools::install_github("mashrur-ayon/genderstat", subdir = "genderstat")
+
+```
+
 ## Case Study 1: Analyzing Gender Pay Gap
 
 In this case study, we analyze the Gender Pay Gap (GPG) across different countries using the `genderstat` package. The Gender Pay Gap is a critical indicator that highlights income disparities between men and women.
