@@ -6,25 +6,26 @@ jobs:
   R-CMD-check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
       - name: Set up R
         uses: r-lib/actions/setup-r@v2
 
       - name: Install dependencies
         run: |
-          cd genderstat/genderstat
           Rscript -e 'install.packages("remotes")'
-          Rscript -e 'remotes::install_deps(dependencies = TRUE)'
+          Rscript -e 'remotes::install_deps(dependencies = TRUE, repos = "https://cran.rstudio.com")'
           Rscript -e 'remotes::install_cran("testthat")'
+        working-directory: genderstat/genderstat
 
       - name: Check package
         run: |
-          cd genderstat/genderstat
           R CMD build .
           R CMD check genderstat_*.tar.gz --no-manual --as-cran
+        working-directory: genderstat/genderstat
 
       - name: Run tests
         run: |
-          cd genderstat/genderstat
           Rscript -e 'testthat::test_dir("tests/testthat")'
+        working-directory: genderstat/genderstat
