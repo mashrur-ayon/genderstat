@@ -15,13 +15,13 @@ The `genderstat` R package is a useful tool for quantitative analysis in gender 
 # Installation
 To install the genderstat package, you have two options: installing from CRAN or directly from GitHub.
 
-To install the stable release from CRAN, use the following command in your R console:
+To install the stable release from CRAN (version 0.1.3), use the following command in your R console:
 
 ```r
 install.packages("genderstat")
 ```
 
-For the latest development version, you can install the package directly from GitHub using the `devtools` package. First, ensure that `devtools` is installed:
+For the latest development version (version 0.1.5), you can install the package directly from GitHub using the `devtools` package. First, ensure that `devtools` is installed:
 
 ```r
 install.packages("devtools")
