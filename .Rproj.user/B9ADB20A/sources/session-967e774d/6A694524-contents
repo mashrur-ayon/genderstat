@@ -1,0 +1,13 @@
+data(real_data_GII)
+gii_results <- gender_inequality_index(real_data_GII)
+# Select bottom 5 countries with the lowest Gender Inequality Index
+bottom_5_gii <- gii_results[order(gii_results$GII), ][1:5, ]
+
+print(bottom_5_gii)
+
+
+# Visualize the results
+ggplot(bottom_5_gii, aes(x = reorder(country, GII), y = GII)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Bottom 5 Countries with Lowest Gender Inequality Index", x = "Country", y = "GII")

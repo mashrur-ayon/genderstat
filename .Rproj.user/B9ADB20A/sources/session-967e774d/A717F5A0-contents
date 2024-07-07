@@ -16,9 +16,15 @@ jobs:
           Rscript -e 'install.packages("remotes")'
           Rscript -e 'remotes::install_deps(dependencies = TRUE)'
           Rscript -e 'remotes::install_cran("testthat")'
+        working-directory: genderstat/genderstat
 
       - name: Check package
-        run: R CMD check --no-manual --as-cran
+        run: |
+          cd genderstat/genderstat
+          R CMD build .
+          R CMD check genderstat_*.tar.gz --no-manual --as-cran
 
       - name: Run tests
-        run: Rscript -e 'testthat::test_dir("tests/testthat")'
+        run: |
+          cd genderstat/genderstat
+          Rscript -e 'testthat::test_dir("tests/testthat")'
