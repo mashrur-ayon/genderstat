@@ -172,7 +172,7 @@ ggplot(top_5_gpg, aes(x = reorder(country, gpg), y = gpg)) +
 
 **Output:**
 
-![Countries with Highest Gender Pay Gap](https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/gender-pay-gap.png)
+![Countries with Highest Gender Pay Gap](https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/gender-pay-gap.png){ width=60% }
 
 The results from the gender_pay_gap function reveal significant income disparities in the selected countries, providing a clear picture of where gender pay inequities are most pronounced.
 
@@ -210,7 +210,7 @@ ggplot(bottom_5_gii, aes(x = reorder(country, GII), y = GII)) +
 ```
 **Output:**
 
-![Countries with Lowest Gender Inequality Index](https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/gender-inequality-index.png)
+![Countries with Lowest Gender Inequality Index](https://raw.githubusercontent.com/mashrur-ayon/genderstat/main/plots-pictures/gender-inequality-index.png){ width=60% }
 
 
 
