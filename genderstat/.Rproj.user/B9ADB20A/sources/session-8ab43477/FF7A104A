@@ -3,7 +3,7 @@
     "path": "~/GitHub/genderstat/genderstat/DESCRIPTION",
     "project_path": "DESCRIPTION",
     "type": "dcf",
-    "hash": "2353900327",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1720370277469.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "14,26",
+        "cursorPosition": "16,21",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1720256197,
+    "lastKnownWriteTime": 1720544878,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1720256197,
+    "last_content_update": 1720544878812,
     "read_only": false,
     "read_only_alternatives": []
 }
