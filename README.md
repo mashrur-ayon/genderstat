@@ -1,5 +1,4 @@
-# genderstat: R Package for Analytical Exploration of Gender Metrics by Country [![CRAN status](https://www.r-pkg.org/badges/version/genderstat)](https://cran.r-project.org/web/packages/genderstat/index.html) [![status](https://joss.theoj.org/papers/cade05e5f52b64e0e866ce27921bd041/status.svg)](https://joss.theoj.org/papers/cade05e5f52b64e0e866ce27921bd041)
-
+# genderstat: R Package for Analytical Exploration of Gender Metrics by Country [![CRAN status](https://www.r-pkg.org/badges/version/genderstat)](https://cran.r-project.org/web/packages/genderstat/index.html)
 
 
 The `genderstat` package is a comprehensive tool developed for the R programming environment, designed to facilitate quantitative evaluations in gender studies. It includes functions to calculate essential gender disparity indicators such as the Gender Pay Gap (GPG), Gender Inequality Index (GII), Gender Development Index (GDI), and Gender Empowerment Measure (GEM). These functions are designed to be user-friendly, requiring minimal coding effort while ensuring accurate and reliable computations.
