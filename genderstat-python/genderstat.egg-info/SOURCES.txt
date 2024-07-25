@@ -1,5 +1,0 @@
-setup.py
-genderstat.egg-info/PKG-INFO
-genderstat.egg-info/SOURCES.txt
-genderstat.egg-info/dependency_links.txt
-genderstat.egg-info/top_level.txt
